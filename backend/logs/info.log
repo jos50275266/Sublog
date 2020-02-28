@@ -1,0 +1,23 @@
+2020-02-28T20:03:28.428Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-02-28T20:04:41.678Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-02-28T20:06:18.512Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-02-28T20:07:10.923Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-02-28T20:07:16.527Z [CustomLogger] info: Server is running on port 8000
+2020-02-28T20:07:17.870Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-02-28T20:07:22.531Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-02-28T20:08:05.388Z [CustomLogger] info: Server is running on port 8000
+2020-02-28T20:08:06.824Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-02-28T20:09:31.813Z [CustomLogger] info: [0mPOST /api/signup [33m400 [0m1843.987 ms - 44[0m
+
+2020-02-28T20:09:46.370Z [CustomLogger] info: [0mPOST /api/signup [32m200 [0m573.538 ms - 57[0m
+
+2020-02-28T20:10:05.095Z [CustomLogger] info: [0mPOST /api/signin [0m- [0m- ms - -[0m
+
+2020-02-28T20:10:42.708Z [CustomLogger] info: Server is running on port 8000
+2020-02-28T20:10:44.149Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-02-28T20:10:46.512Z [CustomLogger] info: [0mPOST /api/signin [32m200 [0m281.999 ms - 298[0m
+
+2020-02-28T20:11:26.724Z [CustomLogger] info: [0mGET /api/secret [32m200 [0m6.593 ms - 53[0m
+
+2020-02-28T20:11:41.009Z [CustomLogger] info: [0mGET /api/signout [32m200 [0m0.908 ms - 43[0m
+
