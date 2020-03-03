@@ -1,6 +1,12 @@
 import fetch from "isomorphic-fetch";
-import cookie from "js-cookie";
 import { API } from "../config";
+import {
+  setCookie,
+  getCookie,
+  removeCookie,
+  setLocalStorage,
+  removeLocalStorage
+} from "../actions/authHelpers";
 
 export const signup = user => {
   return fetch(`${API}/signup`, {
@@ -32,43 +38,18 @@ export const signin = user => {
     .catch(err => console.log(err));
 };
 
-export const setCookie = (key, value) => {
-  if (process.browser) {
-    cookie.set(key, value, {
-      expires: 1
-    });
-  }
-};
+export const logout = next => {
+  removeCookie("token");
+  removeLocalStorage("user");
+  next();
 
-export const getCookie = key => {
-  if (process.browser) {
-    return cookie.get(key);
-  }
-};
-
-export const removeCookie = key => {
-  if (process.browser) {
-    cookie.remove(key, {
-      expires: 1
-    });
-  }
-};
-
-export const setLocalStorage = (key, value) => {
-  if (process.browser) {
-    localStorage.setItem(key, JSON.stringify(value));
-  }
-};
-
-export const removeLocalStorage = key => {
-  if (process.browser) {
-    localStorage.removeItem(key);
-  }
+  return;
 };
 
 export const authenticate = (data, next) => {
-  setCookie("token", data.token);
-  setLocalStorage("user", data.user);
+  const { token, user } = data;
+  setCookie("token", token);
+  setLocalStorage("user", user);
   next();
 };
 

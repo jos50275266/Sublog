@@ -1,5 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Router from "next/router";
 import { APP_NAME } from "../config";
+import { isAuth } from "./../actions/auth";
+import NavItemWithLink from "./common/NavItemWIthLink";
+import NavItemWithoutLink from "./common/NavItemWithoutLink";
+
 import Link from "next/link";
 
 import {
@@ -8,13 +13,7 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText
+  NavLink
 } from "reactstrap";
 
 const Header = () => {
@@ -30,19 +29,26 @@ const Header = () => {
         <Link href="/">
           <NavLink className="font-weight-bold">{APP_NAME}</NavLink>
         </Link>
+
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
-            <NavItem>
-              <Link href="/signin">
-                <NavLink>로그인</NavLink>
-              </Link>
-            </NavItem>
-            <NavItem>
-              <Link href="/signup">
-                <NavLink>회원가입</NavLink>
-              </Link>
-            </NavItem>
+            {!isAuth() && (
+              <React.Fragment>
+                <NavItemWithLink refLink="/signin" name="로그인" />
+                <NavItemWithLink refLink="/signup" name="회원가입" />
+              </React.Fragment>
+            )}
+
+            {isAuth() && <NavItemWithoutLink signout={true} name="로그아웃" />}
+
+            {isAuth() && isAuth().role === 1 && (
+              <NavItemWithLink refLink="/admin" name={isAuth().name} />
+            )}
+
+            {isAuth() && isAuth().role === 0 && (
+              <NavItemWithLink refLink="/user" name={isAuth().name} />
+            )}
           </Nav>
         </Collapse>
       </Navbar>

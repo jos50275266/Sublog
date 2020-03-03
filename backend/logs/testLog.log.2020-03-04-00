@@ -1,0 +1,6 @@
+2020-03-03T15:33:00.770Z [CustomLogger] info: Server is running on port 8000
+2020-03-03T15:33:02.102Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-03-03T15:37:05.458Z [CustomLogger] info: [0mOPTIONS /api/signin [32m204 [0m3.406 ms - 0[0m
+
+2020-03-03T15:37:05.714Z [CustomLogger] info: [0mPOST /api/signin [32m200 [0m252.986 ms - 304[0m
+

@@ -56,3 +56,117 @@
 
 2020-03-03T09:35:37.658Z [CustomLogger] info: [0mPOST /api/signin [33m422 [0m0.932 ms - 54[0m
 
+2020-03-03T10:32:20.769Z [CustomLogger] info: Server is running on port 8000
+2020-03-03T10:32:22.000Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-03-03T10:32:43.079Z [CustomLogger] info: [0mOPTIONS /api/signup [32m204 [0m2.124 ms - 0[0m
+
+2020-03-03T10:32:43.570Z [CustomLogger] info: [0mPOST /api/signup [32m201 [0m488.057 ms - 57[0m
+
+2020-03-03T10:32:51.378Z [CustomLogger] info: [0mOPTIONS /api/signin [32m204 [0m0.402 ms - 0[0m
+
+2020-03-03T10:32:51.713Z [CustomLogger] info: [0mPOST /api/signin [32m200 [0m202.760 ms - 300[0m
+
+2020-03-03T10:46:10.159Z [CustomLogger] info: Server is running on port 8000
+2020-03-03T10:46:11.506Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-03-03T10:46:23.947Z [CustomLogger] info: Server is running on port 8000
+2020-03-03T10:46:25.151Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-03-03T11:24:49.853Z [CustomLogger] info: [0mOPTIONS /api/signin [32m204 [0m2.332 ms - 0[0m
+
+2020-03-03T11:24:51.502Z [CustomLogger] info: [0mPOST /api/signin [32m200 [0m1640.303 ms - 298[0m
+
+2020-03-03T11:25:21.743Z [CustomLogger] info: [0mOPTIONS /api/signin [32m204 [0m0.167 ms - 0[0m
+
+2020-03-03T11:25:21.969Z [CustomLogger] info: [0mPOST /api/signin [32m200 [0m224.100 ms - 298[0m
+
+2020-03-03T12:08:06.781Z [CustomLogger] info: Server is running on port 8000
+2020-03-03T12:08:08.279Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-03-03T12:08:40.313Z [CustomLogger] info: [0mOPTIONS /api/signin [32m204 [0m2.457 ms - 0[0m
+
+2020-03-03T12:08:40.596Z [CustomLogger] info: [0mPOST /api/signin [32m200 [0m278.524 ms - 298[0m
+
+2020-03-03T12:18:14.457Z [CustomLogger] info: Server is running on port 8000
+2020-03-03T12:18:15.816Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-03-03T12:19:27.544Z [CustomLogger] info: Server is running on port 8000
+2020-03-03T12:19:28.973Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-03-03T12:20:53.334Z [CustomLogger] info: [0mOPTIONS /api/signup [32m204 [0m2.898 ms - 0[0m
+
+2020-03-03T12:20:53.884Z [CustomLogger] info: [0mPOST /api/signup [32m201 [0m544.934 ms - 57[0m
+
+2020-03-03T12:21:00.833Z [CustomLogger] info: [0mOPTIONS /api/signin [32m204 [0m0.192 ms - 0[0m
+
+2020-03-03T12:21:01.065Z [CustomLogger] info: [0mPOST /api/signin [32m200 [0m230.236 ms - 304[0m
+
+2020-03-03T12:40:01.221Z [CustomLogger] info: [0mOPTIONS /api/signin [32m204 [0m0.169 ms - 0[0m
+
+2020-03-03T12:40:03.192Z [CustomLogger] info: [0mPOST /api/signin [33m401 [0m1969.725 ms - 86[0m
+
+2020-03-03T12:40:08.910Z [CustomLogger] info: [0mOPTIONS /api/signin [32m204 [0m0.385 ms - 0[0m
+
+2020-03-03T12:40:09.735Z [CustomLogger] info: [0mPOST /api/signin [33m401 [0m822.217 ms - 86[0m
+
+2020-03-03T12:40:47.575Z [CustomLogger] info: [0mOPTIONS /api/signin [32m204 [0m0.233 ms - 0[0m
+
+2020-03-03T12:40:48.411Z [CustomLogger] info: [0mPOST /api/signin [33m401 [0m833.995 ms - 86[0m
+
+2020-03-03T12:42:01.356Z [CustomLogger] info: [0mOPTIONS /api/signup [32m204 [0m0.196 ms - 0[0m
+
+2020-03-03T12:42:01.759Z [CustomLogger] info: [0mPOST /api/signup [32m201 [0m401.404 ms - 57[0m
+
+2020-03-03T12:44:03.478Z [CustomLogger] info: Server is running on port 8000
+2020-03-03T12:44:04.970Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-03-03T12:44:26.513Z [CustomLogger] info: [0mOPTIONS /api/signup [32m204 [0m2.965 ms - 0[0m
+
+2020-03-03T12:44:27.016Z [CustomLogger] info: [0mPOST /api/signup [32m201 [0m499.919 ms - 57[0m
+
+2020-03-03T12:44:35.387Z [CustomLogger] info: [0mOPTIONS /api/signin [32m204 [0m0.327 ms - 0[0m
+
+2020-03-03T12:44:35.631Z [CustomLogger] info: [0mPOST /api/signin [32m200 [0m241.537 ms - 308[0m
+
+2020-03-03T12:45:00.149Z [CustomLogger] info: [0mOPTIONS /api/signin [32m204 [0m0.190 ms - 0[0m
+
+2020-03-03T12:45:00.387Z [CustomLogger] info: [0mPOST /api/signin [32m200 [0m236.318 ms - 308[0m
+
+2020-03-03T12:45:07.367Z [CustomLogger] info: [0mOPTIONS /api/signin [32m204 [0m0.185 ms - 0[0m
+
+2020-03-03T12:45:07.611Z [CustomLogger] info: [0mPOST /api/signin [32m200 [0m242.307 ms - 308[0m
+
+2020-03-03T12:45:21.951Z [CustomLogger] info: [0mOPTIONS /api/signin [32m204 [0m0.208 ms - 0[0m
+
+2020-03-03T12:45:22.183Z [CustomLogger] info: [0mPOST /api/signin [32m200 [0m230.097 ms - 308[0m
+
+2020-03-03T12:46:35.551Z [CustomLogger] info: Server is running on port 8000
+2020-03-03T12:46:36.998Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-03-03T12:46:48.281Z [CustomLogger] info: [0mOPTIONS /api/signin [32m204 [0m2.634 ms - 0[0m
+
+2020-03-03T12:46:48.573Z [CustomLogger] info: [0mPOST /api/signin [32m200 [0m288.963 ms - 308[0m
+
+2020-03-03T12:47:32.771Z [CustomLogger] info: [0mOPTIONS /api/signup [32m204 [0m0.166 ms - 0[0m
+
+2020-03-03T12:47:33.807Z [CustomLogger] info: [0mPOST /api/signup [32m201 [0m1034.397 ms - 57[0m
+
+2020-03-03T12:47:41.023Z [CustomLogger] info: [0mOPTIONS /api/signin [32m204 [0m0.111 ms - 0[0m
+
+2020-03-03T12:47:41.259Z [CustomLogger] info: [0mPOST /api/signin [32m200 [0m234.361 ms - 304[0m
+
+2020-03-03T12:48:37.751Z [CustomLogger] info: [0mOPTIONS /api/signin [32m204 [0m0.177 ms - 0[0m
+
+2020-03-03T12:48:38.002Z [CustomLogger] info: [0mPOST /api/signin [32m200 [0m249.319 ms - 308[0m
+
+2020-03-03T13:35:32.702Z [CustomLogger] info: [0mOPTIONS /api/signin [32m204 [0m0.396 ms - 0[0m
+
+2020-03-03T13:35:34.341Z [CustomLogger] info: [0mPOST /api/signin [32m200 [0m1628.649 ms - 308[0m
+
+2020-03-03T13:44:47.640Z [CustomLogger] info: [0mOPTIONS /api/signin [32m204 [0m0.232 ms - 0[0m
+
+2020-03-03T13:44:49.493Z [CustomLogger] info: [0mPOST /api/signin [32m200 [0m1850.471 ms - 308[0m
+
+2020-03-03T13:45:02.302Z [CustomLogger] info: [0mOPTIONS /api/signin [32m204 [0m0.197 ms - 0[0m
+
+2020-03-03T13:45:03.047Z [CustomLogger] info: [0mPOST /api/signin [32m200 [0m742.688 ms - 308[0m
+
+2020-03-03T15:33:00.770Z [CustomLogger] info: Server is running on port 8000
+2020-03-03T15:33:02.102Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-03-03T15:37:05.458Z [CustomLogger] info: [0mOPTIONS /api/signin [32m204 [0m3.406 ms - 0[0m
+
+2020-03-03T15:37:05.714Z [CustomLogger] info: [0mPOST /api/signin [32m200 [0m252.986 ms - 304[0m
+

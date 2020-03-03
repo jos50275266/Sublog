@@ -1,0 +1,12 @@
+2020-03-03T13:35:32.702Z [CustomLogger] info: [0mOPTIONS /api/signin [32m204 [0m0.396 ms - 0[0m
+
+2020-03-03T13:35:34.341Z [CustomLogger] info: [0mPOST /api/signin [32m200 [0m1628.649 ms - 308[0m
+
+2020-03-03T13:44:47.640Z [CustomLogger] info: [0mOPTIONS /api/signin [32m204 [0m0.232 ms - 0[0m
+
+2020-03-03T13:44:49.493Z [CustomLogger] info: [0mPOST /api/signin [32m200 [0m1850.471 ms - 308[0m
+
+2020-03-03T13:45:02.302Z [CustomLogger] info: [0mOPTIONS /api/signin [32m204 [0m0.197 ms - 0[0m
+
+2020-03-03T13:45:03.047Z [CustomLogger] info: [0mPOST /api/signin [32m200 [0m742.688 ms - 308[0m
+

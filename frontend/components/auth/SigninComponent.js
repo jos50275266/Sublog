@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { signin, authenticate } from "../../actions/auth";
+import { useState, useEffect } from "react";
+import { signin, authenticate, isAuth } from "../../actions/auth";
 import Router from "next/router";
 
 const SigninComponent = () => {
@@ -14,6 +14,11 @@ const SigninComponent = () => {
 
   const { email, password, error, loading, message, showForm } = values;
 
+  // 처음 한 번만 동작시키기위해서 [] as second argument.
+  useEffect(() => {
+    isAuth() && Router.push("/");
+  }, []);
+
   const handleSubmit = e => {
     e.preventDefault();
     setValues({ ...values, loading: true, error: false });
@@ -24,7 +29,8 @@ const SigninComponent = () => {
         setValues({ ...values, error: data.error, loading: false });
       else
         authenticate(data, () => {
-          Router.push("/");
+          if (isAuth() && isAuth().role === 1) Router.push("/admin");
+          else Router.push("/user");
         });
     });
   };
