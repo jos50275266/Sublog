@@ -4,7 +4,7 @@ const router = express.Router();
 const {
   signup,
   signin,
-  signout,
+  logout,
   requireSignin
 } = require("../controllers/auth");
 
@@ -17,7 +17,7 @@ const {
 
 router.post("/signup", userSignupValidator, runValidation, signup);
 router.post("/signin", userSigninValidator, runValidation, signin);
-router.get("/signout", signout);
+router.get("/logout", logout);
 
 router.get("/secret", requireSignin, (req, res, next) => {
   res.json({

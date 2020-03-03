@@ -17,20 +17,22 @@ exports.signup = async (req, res, next) => {
 
   newUser
     .save()
-    .then(() => res.json({ message: "회원가입 성공! 로그인해주세요!" }))
+    .then(() =>
+      res.status(201).json({ message: "회원가입 성공! 로그인해주세요!" })
+    )
     .catch(err => res.status(400).json({ error: err }));
 };
 
 exports.signin = async (req, res, next) => {
   const user = await User.findOne({ email: req.body.email });
   if (!user) {
-    return res.status(400).json({ error: "등록되지않은 계정 입니다." });
+    return res.status(404).json({ error: "등록되지않은 계정 입니다." });
   }
 
   // Authenticate
   if (!user.authenticate(req.body.password)) {
     return res
-      .status(400)
+      .status(401)
       .json({ error: "해당 이메일과 입력하신 비밀번호가 일치하지않습니다." });
   }
 
@@ -41,15 +43,15 @@ exports.signin = async (req, res, next) => {
 
   res.cookie("token", token, { expiresIn: "1d" });
 
-  return res.json({
+  return res.status(200).json({
     token,
     user: { _id, username, name, email, role }
   });
 };
 
-exports.signout = (req, res, next) => {
+exports.logout = (req, res, next) => {
   res.clearCookie("token");
-  res.json({
+  res.status(200).json({
     message: "로그아웃 되었습니다."
   });
 };
