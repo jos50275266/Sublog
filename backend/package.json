@@ -7,8 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "engines": {
+    "node": "12.15.0"
+  },
   "keywords": [],
-  "author": "",
+  "author": "Yongsu Jeong",
   "license": "ISC",
   "dependencies": {
     "cookie-parser": "^1.4.4",
@@ -17,11 +20,13 @@
     "express": "^4.17.1",
     "express-jwt": "^5.3.1",
     "express-validator": "^6.4.0",
+    "helmet": "^3.21.3",
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.24.0",
     "mongoose": "^5.9.2",
     "morgan": "^1.9.1",
     "shortid": "^2.2.15",
+    "supertest": "^4.0.2",
     "winston": "^3.2.1",
     "winston-daily-rotate-file": "^4.4.2"
   }

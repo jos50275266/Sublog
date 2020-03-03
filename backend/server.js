@@ -32,6 +32,7 @@ mongoose
 
 // Middlewares
 app.use(morgan("dev", { stream }));
+app.use(helmet());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());

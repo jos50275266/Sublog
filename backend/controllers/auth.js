@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const { User } = require("../models/user");
-const jwt = require("jsonwebtoken");
 const expressJWT = require("express-jwt");
 const shortId = require("shortid");
 dotenv.config();
