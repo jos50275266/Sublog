@@ -63,3 +63,12 @@ TypeError: Router.use() requires a middleware function but got a Object
     at Function.Module._load (internal/modules/cjs/loader.js:723:14)
     at Function.Module.runMain (internal/modules/cjs/loader.js:1043:10)
     at internal/main/run_main_module.js:17:11
+2020-03-03T09:25:41.898Z [CustomLogger] error: uncaughtException: helmet is not defined
+ReferenceError: helmet is not defined
+    at Object.<anonymous> (C:\Users\user\Desktop\Blog\backend\server.js:35:5)
+    at Module._compile (internal/modules/cjs/loader.js:955:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:991:10)
+    at Module.load (internal/modules/cjs/loader.js:811:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:723:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1043:10)
+    at internal/main/run_main_module.js:17:11
