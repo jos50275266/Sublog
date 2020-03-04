@@ -26,6 +26,7 @@
     "mongoose": "^5.9.2",
     "morgan": "^1.9.1",
     "shortid": "^2.2.15",
+    "slugify": "^1.4.0",
     "supertest": "^4.0.2",
     "winston": "^3.2.1",
     "winston-daily-rotate-file": "^4.4.2"

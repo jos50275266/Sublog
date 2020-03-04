@@ -1,8 +1,0 @@
-2020-03-03T11:24:49.853Z [CustomLogger] info: [0mOPTIONS /api/signin [32m204 [0m2.332 ms - 0[0m
-
-2020-03-03T11:24:51.502Z [CustomLogger] info: [0mPOST /api/signin [32m200 [0m1640.303 ms - 298[0m
-
-2020-03-03T11:25:21.743Z [CustomLogger] info: [0mOPTIONS /api/signin [32m204 [0m0.167 ms - 0[0m
-
-2020-03-03T11:25:21.969Z [CustomLogger] info: [0mPOST /api/signin [32m200 [0m224.100 ms - 298[0m
-

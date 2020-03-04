@@ -7,7 +7,7 @@ export const NavItemWithLink = props => {
   return (
     <NavItem>
       <Link href={refLink}>
-        <NavLink style={{ cursor: "pointer" }}>{name}</NavLink>
+        <NavLink style={{ cursor: "pointer" }}>{`${name}'s Dashboard`}</NavLink>
       </Link>
     </NavItem>
   );

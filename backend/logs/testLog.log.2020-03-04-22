@@ -1,0 +1,28 @@
+2020-03-04T13:19:30.344Z [CustomLogger] info: [0mOPTIONS /api/signin [32m204 [0m0.158 ms - 0[0m
+
+2020-03-04T13:19:31.981Z [CustomLogger] info: [0mPOST /api/signin [32m200 [0m1625.977 ms - 304[0m
+
+2020-03-04T13:19:45.840Z [CustomLogger] info: [0mOPTIONS /api/category [32m204 [0m0.124 ms - 0[0m
+
+2020-03-04T13:19:46.356Z [CustomLogger] info: [0mPOST /api/category [33m400 [0m514.318 ms - 92[0m
+
+2020-03-04T13:19:50.126Z [CustomLogger] info: [0mPOST /api/category [33m400 [0m486.723 ms - 92[0m
+
+2020-03-04T13:19:53.580Z [CustomLogger] info: [0mGET /api/categories [32m200 [0m256.517 ms - 2737[0m
+
+2020-03-04T13:19:56.943Z [CustomLogger] info: [0mOPTIONS /api/category [32m204 [0m0.124 ms - 0[0m
+
+2020-03-04T13:19:57.427Z [CustomLogger] info: [0mPOST /api/category [32m201 [0m482.144 ms - 148[0m
+
+2020-03-04T13:19:58.613Z [CustomLogger] info: [0mGET /api/categories [32m200 [0m244.866 ms - 2886[0m
+
+2020-03-04T13:20:09.271Z [CustomLogger] info: [0mOPTIONS /api/tag [32m204 [0m0.087 ms - 0[0m
+
+2020-03-04T13:20:09.776Z [CustomLogger] info: [0mPOST /api/tag [32m201 [0m503.015 ms - 156[0m
+
+2020-03-04T13:20:14.840Z [CustomLogger] info: [0mOPTIONS /api/tag [32m204 [0m0.100 ms - 0[0m
+
+2020-03-04T13:20:15.334Z [CustomLogger] info: [0mPOST /api/tag [32m201 [0m492.416 ms - 148[0m
+
+2020-03-04T13:20:19.458Z [CustomLogger] info: [0mGET /api/tags [32m200 [0m256.096 ms - 5225[0m
+

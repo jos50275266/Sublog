@@ -10,6 +10,8 @@ dotenv.config();
 
 // routes
 const authRoutes = require("./routes/auth");
+const categoryRoutes = require("./routes/category");
+const tagRoutes = require("./routes/tag");
 
 // Utils' Modules
 const { logger, stream } = require("./utils/logger");
@@ -43,6 +45,8 @@ if (process.env.NODE_ENV === "development") {
 
 // Routes
 app.use("/api", authRoutes);
+app.use("/api", categoryRoutes);
+app.use("/api", tagRoutes);
 
 const port = process.env.PORT || 8000;
 app.listen(port, () => {
