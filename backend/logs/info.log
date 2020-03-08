@@ -1130,3 +1130,5 @@
 
 2020-03-04T13:20:19.458Z [CustomLogger] info: [0mGET /api/tags [32m200 [0m256.096 ms - 5225[0m
 
+2020-03-08T04:18:09.664Z [CustomLogger] info: Server is running on port 8000
+2020-03-08T04:18:11.354Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
