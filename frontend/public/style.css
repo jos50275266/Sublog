@@ -1,0 +1,40 @@
+#nprogress .bar {
+  height: 3px !important;
+}
+
+body {
+  background: #ffffff;
+}
+
+.container-fluid {
+  max-width: 1200px;
+}
+
+header h1 {
+  font-weight: 200;
+}
+
+.card {
+  background: #ffffff;
+}
+
+.card-margin {
+  margin: 10px
+}
+
+.card img {
+  width: 100%;
+}
+
+[class*="row"] {
+  margin-bottom: 1em;
+  justify-content: stretch;
+}
+
+[class*="col-"] {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  width: 100%;
+}

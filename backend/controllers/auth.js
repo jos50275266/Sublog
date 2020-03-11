@@ -1,7 +1,9 @@
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const { User } = require("../models/user");
+const { Blog } = require("../models/blog");
 const expressJWT = require("express-jwt");
+const { errorHandler } = require("../helpers/dbErrorHandler");
 const shortId = require("shortid");
 dotenv.config();
 
@@ -64,34 +66,56 @@ exports.requireSignin = expressJWT({
 
 exports.authMiddleware = (req, res, next) => {
   const authUserId = req.user._id;
-  User.findById({ _id: authUserId }).exec((err, user) => {
-    if (err || !user) {
-      return res.status(400).json({
-        error: "User not found..."
-      });
-    }
-
-    req.profile = user;
-    next();
-  });
+  User.findById({ _id: authUserId })
+    .then(user => {
+      req.profile = user;
+      next();
+    })
+    .catch(err => {
+      return res.status(400).json({ error: "사용자를 찾지 못했습니다..." });
+    });
 };
 
 exports.adminMiddleware = (req, res, next) => {
   const adminUserId = req.user._id;
-  User.findById({ _id: adminUserId }).exec((err, user) => {
-    if (err || !user) {
-      return res.status(400).json({
-        error: "User not found..."
-      });
-    }
+  User.findById({ _id: adminUserId })
+    .then(user => {
+      if (!user) {
+        return res.status(400).json({
+          error: "관리자를 찾지 못했습니다..."
+        });
+      }
 
-    if (user.role !== 1) {
-      return res.status(400).json({
-        error: "Admin resource. Access Denied"
-      });
-    }
+      if (user.role !== 1) {
+        return res.status(400).json({
+          error: "관리자 권한의 사용자만 접근할 수 있습니다..."
+        });
+      }
 
-    req.profile = user;
-    next();
-  });
+      req.profile = user;
+      next();
+    })
+    .catch(err => {
+      return res.status(400).json({
+        error: "관리자를 찾지 못했습니다..."
+      });
+    });
+};
+
+exports.canUpdateDeleteBlog = (req, res, next) => {
+  const slug = req.params.slug.toLowerCase();
+  Blog.findOne({ slug })
+    .then(data => {
+      let authorizedUser =
+        data.postedBy._id.toString() === req.profile._id.toString();
+      if (!authorizedUser) {
+        return res.status(400).json({
+          error: "해당 글에 권한이 없습니다..."
+        });
+      }
+      next();
+    })
+    .catch(err => {
+      return res.status(400).json({ error: errorHandler(err) });
+    });
 };

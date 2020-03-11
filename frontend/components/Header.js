@@ -1,25 +1,27 @@
 import { useState } from "react";
-import { APP_NAME } from "../config";
-import { isAuth } from "./../actions/auth";
-import NavItemWithLink from "./common/NavItemWIthLink";
-import NavItemWithoutLink from "./common/NavItemWithoutLink";
 import Link from "next/link";
 import Router from "next/router";
 import NProgress from "nprogress";
-
+import { APP_NAME } from "../config";
+import { logout, isAuth } from "../actions/auth";
+// Document에 link를 이용하거나 아래와 같이 node_modules을 이용할 수 있다.
+// 하지만 이 방식은 React 에서는 가능하지만 next에서는 안된다.
+// 하지만, next.config.js의 설정을 변경해주면 가능하다.
 import ".././node_modules/nprogress/nprogress.css";
 import {
   Collapse,
   Navbar,
   NavbarToggler,
   NavbarBrand,
-  NavItem,
   Nav,
-  NavLink
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
 } from "reactstrap";
 
-// https://blog.kesuskim.com/2017/07/develop-website-using-next-js/
-// https://nextjs.org/docs/api-reference/next/router#routerevents
 Router.onRouteChangeStart = url => NProgress.start();
 Router.onRouteChangeComplete = url => NProgress.done();
 Router.onRouteChangeError = url => NProgress.done();
@@ -32,15 +34,29 @@ const Header = () => {
   };
 
   return (
-    <div>
+    <header>
       <Navbar color="light" light expand="md">
         <Link href="/">
-          <NavLink className="font-weight-bold">{APP_NAME}</NavLink>
+          <NavLink className="font-weight-bold">
+            <i className="fas fa-dragon">{APP_NAME}</i>
+          </NavLink>
         </Link>
-
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
+            <React.Fragment>
+              <NavItem>
+                <Link href="/blogs">
+                  <NavLink>Sulog</NavLink>
+                </Link>
+              </NavItem>
+              <NavItem>
+                <Link href="/search">
+                  <NavLink>검색</NavLink>
+                </Link>
+              </NavItem>
+            </React.Fragment>
+
             {!isAuth() && (
               <React.Fragment>
                 <NavItem>
@@ -59,7 +75,7 @@ const Header = () => {
             {isAuth() && isAuth().role === 0 && (
               <NavItem>
                 <Link href="/user">
-                  <NavLink>{`${isAuth().name}'s Dashboard`}</NavLink>
+                  <NavLink>{`${isAuth().name}`}</NavLink>
                 </Link>
               </NavItem>
             )}
@@ -67,7 +83,7 @@ const Header = () => {
             {isAuth() && isAuth().role === 1 && (
               <NavItem>
                 <Link href="/admin">
-                  <NavLink>{`${isAuth().name}'s Dashboard`}</NavLink>
+                  <NavLink>{`${isAuth().name}`}</NavLink>
                 </Link>
               </NavItem>
             )}
@@ -76,16 +92,25 @@ const Header = () => {
               <NavItem>
                 <NavLink
                   style={{ cursor: "pointer" }}
-                  onClick={() => signout(() => Router.replace(`/signin`))}
+                  onClick={() => logout(() => Router.replace(`/signin`))}
                 >
-                  Signout
+                  로그아웃
                 </NavLink>
               </NavItem>
             )}
+
+            <NavItem>
+              <NavLink
+                href="/user/crud/blog"
+                className="btn btn-primary text-light"
+              >
+                글쓰기
+              </NavLink>
+            </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
-    </div>
+    </header>
   );
 };
 

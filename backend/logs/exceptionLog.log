@@ -72,3 +72,95 @@ ReferenceError: helmet is not defined
     at Function.Module._load (internal/modules/cjs/loader.js:723:14)
     at Function.Module.runMain (internal/modules/cjs/loader.js:1043:10)
     at internal/main/run_main_module.js:17:11
+2020-03-08T13:28:27.555Z [CustomLogger] error: uncaughtException: result is not defined
+ReferenceError: result is not defined
+    at C:\Users\user\Desktop\Blog\backend\controllers\blog.js:79:9
+    at IncomingForm.<anonymous> (C:\Users\user\Desktop\Blog\backend\node_modules\formidable\lib\incoming_form.js:107:9)
+    at IncomingForm.emit (events.js:223:5)
+    at IncomingForm._maybeEnd (C:\Users\user\Desktop\Blog\backend\node_modules\formidable\lib\incoming_form.js:557:8)
+    at C:\Users\user\Desktop\Blog\backend\node_modules\formidable\lib\incoming_form.js:238:12
+    at WriteStream.<anonymous> (C:\Users\user\Desktop\Blog\backend\node_modules\formidable\lib\file.js:79:5)
+    at Object.onceWrapper (events.js:312:28)
+    at WriteStream.emit (events.js:223:5)
+    at finishMaybe (_stream_writable.js:681:14)
+    at _stream_writable.js:658:5
+    at WriteStream._final (internal/fs/streams.js:285:3)
+    at callFinal (_stream_writable.js:651:10)
+    at processTicksAndRejections (internal/process/task_queues.js:81:21)
+2020-03-08T14:34:57.957Z [CustomLogger] error: uncaughtException: blog.save is not a function
+TypeError: blog.save is not a function
+    at saveBlog (C:\Users\user\Desktop\Blog\backend\controllers\blog.js:14:6)
+    at C:\Users\user\Desktop\Blog\backend\controllers\blog.js:114:7
+    at IncomingForm.<anonymous> (C:\Users\user\Desktop\Blog\backend\node_modules\formidable\lib\incoming_form.js:107:9)
+    at IncomingForm.emit (events.js:223:5)
+    at IncomingForm._maybeEnd (C:\Users\user\Desktop\Blog\backend\node_modules\formidable\lib\incoming_form.js:557:8)
+    at MultipartParser.parser.onEnd (C:\Users\user\Desktop\Blog\backend\node_modules\formidable\lib\incoming_form.js:426:10)
+    at callback (C:\Users\user\Desktop\Blog\backend\node_modules\formidable\lib\multipart_parser.js:102:31)
+    at MultipartParser.write (C:\Users\user\Desktop\Blog\backend\node_modules\formidable\lib\multipart_parser.js:268:15)
+    at IncomingForm.write (C:\Users\user\Desktop\Blog\backend\node_modules\formidable\lib\incoming_form.js:159:34)
+    at IncomingMessage.<anonymous> (C:\Users\user\Desktop\Blog\backend\node_modules\formidable\lib\incoming_form.js:125:12)
+    at IncomingMessage.emit (events.js:223:5)
+    at IncomingMessage.Readable.read (_stream_readable.js:526:10)
+    at flow (_stream_readable.js:1001:34)
+    at resume_ (_stream_readable.js:982:3)
+    at processTicksAndRejections (internal/process/task_queues.js:81:21)
+2020-03-08T14:37:57.194Z [CustomLogger] error: uncaughtException: saveBlog(...) is not a function
+TypeError: saveBlog(...) is not a function
+    at C:\Users\user\Desktop\Blog\backend\controllers\blog.js:113:8
+    at IncomingForm.<anonymous> (C:\Users\user\Desktop\Blog\backend\node_modules\formidable\lib\incoming_form.js:107:9)
+    at IncomingForm.emit (events.js:223:5)
+    at IncomingForm._maybeEnd (C:\Users\user\Desktop\Blog\backend\node_modules\formidable\lib\incoming_form.js:557:8)
+    at C:\Users\user\Desktop\Blog\backend\node_modules\formidable\lib\incoming_form.js:238:12
+    at WriteStream.<anonymous> (C:\Users\user\Desktop\Blog\backend\node_modules\formidable\lib\file.js:79:5)
+    at Object.onceWrapper (events.js:312:28)
+    at WriteStream.emit (events.js:223:5)
+    at finishMaybe (_stream_writable.js:681:14)
+    at _stream_writable.js:658:5
+    at WriteStream._final (internal/fs/streams.js:285:3)
+    at callFinal (_stream_writable.js:651:10)
+    at processTicksAndRejections (internal/process/task_queues.js:81:21)
+2020-03-08T15:03:26.167Z [CustomLogger] error: uncaughtException: oldBlog is not defined
+ReferenceError: oldBlog is not defined
+    at C:\Users\user\Desktop\Blog\backend\controllers\blog.js:96:7
+    at IncomingForm.<anonymous> (C:\Users\user\Desktop\Blog\backend\node_modules\formidable\lib\incoming_form.js:107:9)
+    at IncomingForm.emit (events.js:223:5)
+    at IncomingForm._maybeEnd (C:\Users\user\Desktop\Blog\backend\node_modules\formidable\lib\incoming_form.js:557:8)
+    at C:\Users\user\Desktop\Blog\backend\node_modules\formidable\lib\incoming_form.js:238:12
+    at WriteStream.<anonymous> (C:\Users\user\Desktop\Blog\backend\node_modules\formidable\lib\file.js:79:5)
+    at Object.onceWrapper (events.js:312:28)
+    at WriteStream.emit (events.js:223:5)
+    at finishMaybe (_stream_writable.js:681:14)
+    at _stream_writable.js:658:5
+    at WriteStream._final (internal/fs/streams.js:285:3)
+    at callFinal (_stream_writable.js:651:10)
+    at processTicksAndRejections (internal/process/task_queues.js:81:21)
+2020-03-09T15:07:04.820Z [CustomLogger] error: uncaughtException: file is not defined
+ReferenceError: file is not defined
+    at C:\Users\user\Desktop\Blog\backend\controllers\blog.js:215:48
+    at IncomingForm.<anonymous> (C:\Users\user\Desktop\Blog\backend\node_modules\formidable\lib\incoming_form.js:107:9)
+    at IncomingForm.emit (events.js:223:5)
+    at IncomingForm._maybeEnd (C:\Users\user\Desktop\Blog\backend\node_modules\formidable\lib\incoming_form.js:557:8)
+    at C:\Users\user\Desktop\Blog\backend\node_modules\formidable\lib\incoming_form.js:238:12
+    at WriteStream.<anonymous> (C:\Users\user\Desktop\Blog\backend\node_modules\formidable\lib\file.js:79:5)
+    at Object.onceWrapper (events.js:312:28)
+    at WriteStream.emit (events.js:223:5)
+    at finishMaybe (_stream_writable.js:681:14)
+    at _stream_writable.js:658:5
+    at WriteStream._final (internal/fs/streams.js:285:3)
+    at callFinal (_stream_writable.js:651:10)
+    at processTicksAndRejections (internal/process/task_queues.js:81:21)
+2020-03-11T06:00:40.270Z [CustomLogger] error: uncaughtException: Cannot read property 'length' of undefined
+TypeError: Cannot read property 'length' of undefined
+    at C:\Users\user\Desktop\Blog\backend\controllers\blog.js:29:32
+    at IncomingForm.<anonymous> (C:\Users\user\Desktop\Blog\backend\node_modules\formidable\lib\incoming_form.js:107:9)
+    at IncomingForm.emit (events.js:223:5)
+    at IncomingForm._maybeEnd (C:\Users\user\Desktop\Blog\backend\node_modules\formidable\lib\incoming_form.js:557:8)
+    at C:\Users\user\Desktop\Blog\backend\node_modules\formidable\lib\incoming_form.js:238:12
+    at WriteStream.<anonymous> (C:\Users\user\Desktop\Blog\backend\node_modules\formidable\lib\file.js:79:5)
+    at Object.onceWrapper (events.js:312:28)
+    at WriteStream.emit (events.js:223:5)
+    at finishMaybe (_stream_writable.js:681:14)
+    at _stream_writable.js:658:5
+    at WriteStream._final (internal/fs/streams.js:285:3)
+    at callFinal (_stream_writable.js:651:10)
+    at processTicksAndRejections (internal/process/task_queues.js:81:21)

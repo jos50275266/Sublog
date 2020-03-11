@@ -19,10 +19,4 @@ router.post("/signup", userSignupValidator, runValidation, signup);
 router.post("/signin", userSigninValidator, runValidation, signin);
 router.get("/logout", logout);
 
-router.get("/secret", requireSignin, (req, res, next) => {
-  res.json({
-    message: "비밀 페이지에 접근했습니다."
-  });
-});
-
 module.exports = router;

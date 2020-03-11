@@ -6,9 +6,64 @@
     "auditLog": "C:\\Users\\user\\Desktop\\Blog\\backend\\logs\\.95c2ce5fe0a6c8b4c376abc3288f106f4f521cef-audit.json",
     "files": [
         {
-            "date": 1583641089644,
-            "name": "C:\\Users\\user\\Desktop\\Blog\\backend\\logs\\testLog.log.2020-03-08-13",
-            "hash": "524a85382d32ffbf30a32ce0ebef92a8"
+            "date": 1583905727873,
+            "name": "C:\\Users\\user\\Desktop\\Blog\\backend\\logs\\testLog.log.2020-03-11-14",
+            "hash": "e6495345a29ccfc8ff536feb9e084d6d"
+        },
+        {
+            "date": 1583906409389,
+            "name": "C:\\Users\\user\\Desktop\\Blog\\backend\\logs\\testLog.log.2020-03-11-15",
+            "hash": "3791378ad06c5109bfa054f4f161eee1"
+        },
+        {
+            "date": 1583919774636,
+            "name": "C:\\Users\\user\\Desktop\\Blog\\backend\\logs\\testLog.log.2020-03-11-18",
+            "hash": "8036dd760cb557e36332b488132eb0a0"
+        },
+        {
+            "date": 1583920829162,
+            "name": "C:\\Users\\user\\Desktop\\Blog\\backend\\logs\\testLog.log.2020-03-11-19",
+            "hash": "03f2b5e2a78a26f64cf235de8509cb26"
+        },
+        {
+            "date": 1583928425225,
+            "name": "C:\\Users\\user\\Desktop\\Blog\\backend\\logs\\testLog.log.2020-03-11-21",
+            "hash": "81fbd1d382040a0eeefb7310c137e433"
+        },
+        {
+            "date": 1583933442497,
+            "name": "C:\\Users\\user\\Desktop\\Blog\\backend\\logs\\testLog.log.2020-03-11-22",
+            "hash": "42ae50fba44a552fbaea9c7f3738aed0"
+        },
+        {
+            "date": 1583935224098,
+            "name": "C:\\Users\\user\\Desktop\\Blog\\backend\\logs\\testLog.log.2020-03-11-23",
+            "hash": "bb42224ea32157f2f02552d3871a4f68"
+        },
+        {
+            "date": 1583939636831,
+            "name": "C:\\Users\\user\\Desktop\\Blog\\backend\\logs\\testLog.log.2020-03-12-00",
+            "hash": "aa8ce0f33f1a96443863a05c8651b1a8"
+        },
+        {
+            "date": 1583942429691,
+            "name": "C:\\Users\\user\\Desktop\\Blog\\backend\\logs\\testLog.log.2020-03-12-01",
+            "hash": "f29dbb63697e8155c716bfa7d223c505"
+        },
+        {
+            "date": 1583946002873,
+            "name": "C:\\Users\\user\\Desktop\\Blog\\backend\\logs\\testLog.log.2020-03-12-02",
+            "hash": "034fe004499e4df841a8573cced2720f"
+        },
+        {
+            "date": 1583949600372,
+            "name": "C:\\Users\\user\\Desktop\\Blog\\backend\\logs\\testLog.log.2020-03-12-03",
+            "hash": "b8457596bb281618455cfea604a69528"
+        },
+        {
+            "date": 1583953493799,
+            "name": "C:\\Users\\user\\Desktop\\Blog\\backend\\logs\\testLog.log.2020-03-12-04",
+            "hash": "5136395da6dd8cef2185e788a0e8d260"
         }
     ]
 }

@@ -1,0 +1,4 @@
+2020-03-11T13:30:42.495Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m2607.286 ms - -[0m
+
+2020-03-11T13:30:42.687Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m2795.173 ms - -[0m
+

@@ -1,0 +1,264 @@
+2020-03-11T19:04:53.797Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m1920.575 ms - 6890[0m
+
+2020-03-11T19:07:13.689Z [CustomLogger] info: [0mPOST /api/blogs-categories-tags [32m200 [0m814.087 ms - 2788[0m
+
+2020-03-11T19:07:15.029Z [CustomLogger] info: [0mGET /api/blog/photo/test [36m304 [0m1232.163 ms - -[0m
+
+2020-03-11T19:07:20.284Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m515.106 ms - 6890[0m
+
+2020-03-11T19:07:23.482Z [CustomLogger] info: [0mGET /api/blog/Layout.js [32m200 [0m190.184 ms - 4[0m
+
+2020-03-11T19:07:23.509Z [CustomLogger] info: [0mGET /api/blog/[slug].js [32m200 [0m215.070 ms - 4[0m
+
+2020-03-11T19:07:28.728Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m476.743 ms - 6890[0m
+
+2020-03-11T19:07:33.686Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m410.401 ms - 6890[0m
+
+2020-03-11T19:07:38.714Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m458.895 ms - 6890[0m
+
+2020-03-11T19:07:49.817Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m514.213 ms - 6890[0m
+
+2020-03-11T19:07:51.599Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m508.686 ms - 6890[0m
+
+2020-03-11T19:07:57.742Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m486.298 ms - 6890[0m
+
+2020-03-11T19:08:02.662Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m408.534 ms - 6890[0m
+
+2020-03-11T19:08:07.760Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m505.805 ms - 6890[0m
+
+2020-03-11T19:08:12.761Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m506.688 ms - 6890[0m
+
+2020-03-11T19:08:17.801Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m546.267 ms - 6890[0m
+
+2020-03-11T19:08:22.698Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m408.557 ms - 6890[0m
+
+2020-03-11T19:08:27.692Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m434.940 ms - 6890[0m
+
+2020-03-11T19:09:04.214Z [CustomLogger] info: [0mPOST /api/blogs-categories-tags [32m200 [0m822.295 ms - 2788[0m
+
+2020-03-11T19:09:05.503Z [CustomLogger] info: [0mGET /api/blog/photo/test [36m304 [0m1128.334 ms - -[0m
+
+2020-03-11T19:09:15.628Z [CustomLogger] info: [0mGET /api/category/data-structure [32m200 [0m713.754 ms - 607[0m
+
+2020-03-11T19:09:17.337Z [CustomLogger] info: [0mGET /api/blog/photo/test [36m304 [0m1306.295 ms - -[0m
+
+2020-03-11T19:09:31.754Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m512.432 ms - 6890[0m
+
+2020-03-11T19:09:41.490Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m545.433 ms - 6890[0m
+
+2020-03-11T19:09:46.364Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m425.854 ms - 6890[0m
+
+2020-03-11T19:09:51.441Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m500.631 ms - 6890[0m
+
+2020-03-11T19:09:56.926Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m989.676 ms - 6890[0m
+
+2020-03-11T19:10:01.480Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m528.254 ms - 6890[0m
+
+2020-03-11T19:10:05.258Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m509.586 ms - 6890[0m
+
+2020-03-11T19:10:08.248Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.283 ms - 0[0m
+
+2020-03-11T19:10:08.504Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m251.225 ms - 2[0m
+
+2020-03-11T19:10:08.994Z [CustomLogger] info: [0mGET /api/blog/photo/test [36m304 [0m3459.091 ms - -[0m
+
+2020-03-11T19:10:25.728Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m435.563 ms - 6890[0m
+
+2020-03-11T19:10:44.148Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m496.174 ms - 6890[0m
+
+2020-03-11T19:10:52.475Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m437.141 ms - 6890[0m
+
+2020-03-11T19:10:59.428Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m506.043 ms - 6890[0m
+
+2020-03-11T19:11:26.975Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m409.450 ms - 6890[0m
+
+2020-03-11T19:11:27.469Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m418.376 ms - 6890[0m
+
+2020-03-11T19:11:28.033Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m529.220 ms - 6890[0m
+
+2020-03-11T19:11:28.254Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m729.659 ms - 6890[0m
+
+2020-03-11T19:11:29.033Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.128 ms - 0[0m
+
+2020-03-11T19:11:29.279Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m243.869 ms - 2[0m
+
+2020-03-11T19:11:30.751Z [CustomLogger] info: [0mGET /api/blog/photo/test [36m304 [0m2422.670 ms - -[0m
+
+2020-03-11T19:11:57.789Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.233 ms - 0[0m
+
+2020-03-11T19:11:58.383Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m273.279 ms - 2[0m
+
+2020-03-11T19:12:06.769Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.216 ms - 0[0m
+
+2020-03-11T19:12:07.010Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m216.672 ms - 2[0m
+
+2020-03-11T19:12:07.346Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m466.689 ms - 6890[0m
+
+2020-03-11T19:12:09.382Z [CustomLogger] info: [0mGET /api/blog/photo/test [36m304 [0m1688.037 ms - -[0m
+
+2020-03-11T19:12:09.782Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m230.865 ms - 2[0m
+
+2020-03-11T19:12:42.664Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.211 ms - 0[0m
+
+2020-03-11T19:12:42.857Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m190.356 ms - 2[0m
+
+2020-03-11T19:12:43.154Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m215.007 ms - 2[0m
+
+2020-03-11T19:12:49.131Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m508.158 ms - 6890[0m
+
+2020-03-11T19:12:49.758Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.192 ms - 0[0m
+
+2020-03-11T19:12:50.027Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m265.905 ms - 2[0m
+
+2020-03-11T19:12:50.836Z [CustomLogger] info: [0mGET /api/blog/photo/test [36m304 [0m1621.822 ms - -[0m
+
+2020-03-11T19:15:20.698Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.178 ms - 0[0m
+
+2020-03-11T19:15:20.904Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m190.000 ms - 2[0m
+
+2020-03-11T19:18:53.175Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.166 ms - 0[0m
+
+2020-03-11T19:18:53.374Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m192.140 ms - 2[0m
+
+2020-03-11T19:18:58.789Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.199 ms - 0[0m
+
+2020-03-11T19:18:59.036Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m212.227 ms - 2[0m
+
+2020-03-11T19:19:07.261Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.190 ms - 0[0m
+
+2020-03-11T19:19:07.465Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m202.443 ms - 2[0m
+
+2020-03-11T19:19:21.517Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m885.583 ms - 6890[0m
+
+2020-03-11T19:19:22.159Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.132 ms - 0[0m
+
+2020-03-11T19:19:22.351Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m190.761 ms - 2[0m
+
+2020-03-11T19:19:23.471Z [CustomLogger] info: [0mGET /api/blog/photo/test [36m304 [0m1819.729 ms - -[0m
+
+2020-03-11T19:24:07.768Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m413.464 ms - 6890[0m
+
+2020-03-11T19:24:08.409Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.184 ms - 0[0m
+
+2020-03-11T19:24:08.600Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m189.376 ms - 2[0m
+
+2020-03-11T19:24:09.610Z [CustomLogger] info: [0mGET /api/blog/photo/test [36m304 [0m1723.542 ms - -[0m
+
+2020-03-11T19:26:47.481Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.199 ms - 0[0m
+
+2020-03-11T19:26:47.702Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m219.435 ms - 2[0m
+
+2020-03-11T19:26:50.495Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m423.553 ms - 6890[0m
+
+2020-03-11T19:26:51.417Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m227.111 ms - 2[0m
+
+2020-03-11T19:26:51.937Z [CustomLogger] info: [0mGET /api/blog/photo/test [36m304 [0m1321.190 ms - -[0m
+
+2020-03-11T19:27:06.311Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.233 ms - 0[0m
+
+2020-03-11T19:27:06.531Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m217.828 ms - 2[0m
+
+2020-03-11T19:27:15.182Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m599.539 ms - 6890[0m
+
+2020-03-11T19:27:15.739Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.140 ms - 0[0m
+
+2020-03-11T19:27:15.932Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m189.783 ms - 2[0m
+
+2020-03-11T19:27:16.869Z [CustomLogger] info: [0mGET /api/blog/photo/test [36m304 [0m1603.537 ms - -[0m
+
+2020-03-11T19:28:47.481Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.226 ms - 0[0m
+
+2020-03-11T19:28:47.703Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m217.882 ms - 2[0m
+
+2020-03-11T19:28:47.822Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m189.647 ms - 2[0m
+
+2020-03-11T19:28:47.881Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m191.262 ms - 2[0m
+
+2020-03-11T19:28:53.963Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m537.677 ms - 6890[0m
+
+2020-03-11T19:28:54.665Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.111 ms - 0[0m
+
+2020-03-11T19:28:54.894Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m226.730 ms - 2[0m
+
+2020-03-11T19:28:55.945Z [CustomLogger] info: [0mGET /api/blog/photo/test [36m304 [0m1891.185 ms - -[0m
+
+2020-03-11T19:31:10.349Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.190 ms - 0[0m
+
+2020-03-11T19:31:10.613Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m262.426 ms - 2[0m
+
+2020-03-11T19:31:10.633Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m212.641 ms - 2[0m
+
+2020-03-11T19:31:10.694Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m217.790 ms - 2[0m
+
+2020-03-11T19:31:12.837Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m551.264 ms - 6890[0m
+
+2020-03-11T19:31:13.805Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m214.461 ms - 2[0m
+
+2020-03-11T19:31:14.600Z [CustomLogger] info: [0mGET /api/blog/photo/test [36m304 [0m1555.100 ms - -[0m
+
+2020-03-11T19:31:28.152Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m4.370 ms - 0[0m
+
+2020-03-11T19:31:28.448Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m220.951 ms - 2[0m
+
+2020-03-11T19:31:52.211Z [CustomLogger] info: [0mGET /api/blog/test [32m200 [0m420.842 ms - 6890[0m
+
+2020-03-11T19:31:53.979Z [CustomLogger] info: [0mGET /api/blog/photo/test [36m304 [0m1196.330 ms - -[0m
+
+2020-03-11T19:31:53.995Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.196 ms - 0[0m
+
+2020-03-11T19:31:54.188Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m190.612 ms - 2[0m
+
+2020-03-11T19:32:09.638Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.175 ms - 0[0m
+
+2020-03-11T19:32:09.948Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m308.517 ms - 2[0m
+
+2020-03-11T19:32:21.015Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.234 ms - 0[0m
+
+2020-03-11T19:32:21.215Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m190.951 ms - 2[0m
+
+2020-03-11T19:32:40.251Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.205 ms - 0[0m
+
+2020-03-11T19:32:40.451Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m196.029 ms - 2[0m
+
+2020-03-11T19:33:13.494Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m196.604 ms - -[0m
+
+2020-03-11T19:33:13.513Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m218.306 ms - -[0m
+
+2020-03-11T19:33:15.896Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m197.254 ms - -[0m
+
+2020-03-11T19:33:15.936Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m236.657 ms - -[0m
+
+2020-03-11T19:36:13.716Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m2501.632 ms - -[0m
+
+2020-03-11T19:36:41.221Z [CustomLogger] info: [0mGET /api/tags [33m404 [0m30003.350 ms - 12[0m
+
+2020-03-11T19:36:58.160Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m222.161 ms - -[0m
+
+2020-03-11T19:36:58.395Z [CustomLogger] info: [0mGET /api/tags [32m200 [0m454.728 ms - 1865[0m
+
+2020-03-11T19:40:21.217Z [CustomLogger] info: [0mOPTIONS /api/blog [32m204 [0m0.183 ms - 0[0m
+
+2020-03-11T19:40:24.414Z [CustomLogger] info: [0mPOST /api/blog [32m200 [0m3193.845 ms - 635539[0m
+
+2020-03-11T19:40:31.947Z [CustomLogger] info: [0mPOST /api/blogs-categories-tags [32m200 [0m1090.829 ms - 3179[0m
+
+2020-03-11T19:40:33.056Z [CustomLogger] info: [0mGET /api/blog/photo/fwfwfw [32m200 [0m1021.860 ms - 178070[0m
+
+2020-03-11T19:40:33.156Z [CustomLogger] info: [0mGET /api/blog/photo/test [36m304 [0m1120.577 ms - -[0m
+
+2020-03-11T19:40:37.394Z [CustomLogger] info: [0mGET /api/blog/fwfwfw [32m200 [0m749.368 ms - 7305[0m
+
+2020-03-11T19:40:38.622Z [CustomLogger] info: [0mGET /api/blog/www.google.com [32m200 [0m233.870 ms - 4[0m
+
+2020-03-11T19:40:39.783Z [CustomLogger] info: [0mGET /api/blog/photo/fwfwfw [36m304 [0m1467.841 ms - -[0m
+
+2020-03-11T19:40:39.983Z [CustomLogger] info: [0mGET /api/blog/www.google.com [32m200 [0m250.114 ms - 4[0m
+
+2020-03-11T19:40:40.257Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.210 ms - 0[0m
+
+2020-03-11T19:40:40.482Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m222.962 ms - 2[0m
+
+2020-03-11T19:41:08.474Z [CustomLogger] info: [0mGET /api/blog/www.google.com [32m200 [0m216.374 ms - 4[0m
+
+2020-03-11T19:41:09.010Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.237 ms - 0[0m
+

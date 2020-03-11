@@ -1,5 +1,6 @@
 const { Category } = require("../models/category");
-const slugify = require("slugify");
+const { Blog } = require("../models/blog");
+const slugify = require("slug");
 const { errorHandler } = require("../helpers/dbErrorHandler");
 
 exports.create = (req, res, next) => {
@@ -27,7 +28,17 @@ exports.read = (req, res, next) => {
 
   // {index: true} 한 이유
   Category.findOne({ slug })
-    .then(category => res.status(200).json(category))
+    .then(category => {
+      Blog.find({ categories: category })
+        .populate("categories", "_id name slug")
+        .populate("tags", "_id name slug")
+        .populate("postedBy", "_id name")
+        .select(
+          "_id title slug excerpt categories postedBy tags createdAt updatedAt"
+        )
+        .then(data => res.json({ category: category, blogs: data }))
+        .catch(err => res.status(400).json({ error: errorHandler(err) }));
+    })
     .catch(err => res.status(400).json({ error: errorHandler(err) }));
 };
 
