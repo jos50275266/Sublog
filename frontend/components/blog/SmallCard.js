@@ -1,9 +1,37 @@
+import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import renderHTML from "react-render-html";
 import moment from "moment";
+import { getCookie } from "../../actions/authHelpers";
+import { like, likeUpdate } from "../../actions/blog";
 import { API } from "../../config";
 
 const SmallCard = ({ blog }) => {
+  const [numberOfLike, setNumberOfLike] = useState(0);
+
+  useEffect(() => {
+    initialzeLikeNum();
+  }, []);
+
+  const initialzeLikeNum = () => {
+    like(blog.slug)
+      .then(data => setNumberOfLike(data.like.length))
+      .catch(err => console.log(err));
+  };
+
+  const updateLikeNum = () => {
+    const token = getCookie("token");
+
+    likeUpdate(blog.slug, token)
+      .then(data => {
+        // console.log(data);
+        setNumberOfLike(data.like.length);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
+
   return (
     <div className="card">
       <section>
@@ -25,13 +53,25 @@ const SmallCard = ({ blog }) => {
               <h5 className="card-title">{blog.title}</h5>
             </a>
           </Link>
-          <span className="card-body">{renderHTML(blog.excerpt)}</span>
         </div>
         <div className="card-body">
-          By {blog.postedBy.name}, {moment(blog.updatedAt).fromNow()}
-          <Link href={`/`}>
-            <a className="float-right">{blog.postedBy.name}</a>
+          <span style={{ display: "block" }} className="card-text pl-2">
+            {blog.excerpt}
+          </span>
+          <Link href={`/blogs/${blog.slug}`}>
+            <a className="ml-2">Show More...</a>
           </Link>
+          <hr />
+          {moment(blog.updatedAt).format("lll")}
+          <Link href={`/`}>
+            <a className="float-left">By {blog.postedBy.name}</a>
+          </Link>
+          <label className="float-right">
+            <FontAwesomeIcon icon="heart" onClick={updateLikeNum}                   style={{ color: "red" }}
+            />
+            &nbsp;
+            {numberOfLike}
+          </label>
         </div>
       </article>
     </div>

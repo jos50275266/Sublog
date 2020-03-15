@@ -25,7 +25,7 @@ exports.create = (req, res) => {
       });
     }
 
-    console.log("fields", fields);
+    // console.log("fields", fields);
     const { title, body, categories, tags, excerpt } = fields;
 
     if (!title || !title.length || title <= 1) {
@@ -52,6 +52,12 @@ exports.create = (req, res) => {
       });
     }
 
+    if (!excerpt || excerpt.length < 10) {
+      return res.status(400).json({
+        error: "10 글자 이상의 소개글을 작성해주세요"
+      });
+    }
+
     let blog = new Blog();
     blog.title = title;
     blog.body = body;
@@ -63,6 +69,8 @@ exports.create = (req, res) => {
 
     // categories and tags
     let arrayOfCategories = categories && categories.split(",");
+    // console.log("array", arrayOfCategories);
+    // console.log(categories);
     let arrayOfTags = tags && tags.split(",");
 
     if (files.photo) {
@@ -150,7 +158,7 @@ exports.read = (req, res) => {
     .populate("tags", "_id name slug")
     .populate("postedBy", "_id name username")
     .select(
-      "_id title body slug mtitle mdesc categories tags postedBy createdBy updatedAt"
+      "_id title body excerpt slug mtitle mdesc categories tags postedBy createdBy updatedAt"
     )
     .then(data => res.json(data))
     .catch(err => res.json({ error: errorHandler(err) }));
@@ -195,11 +203,20 @@ exports.update = (req, res) => {
         oldBlog = _.merge(oldBlog, fields);
         oldBlog.slug = slugBeforeMerge;
 
-        const { body, desc, categories, tags } = fields;
+        // console.log("fields", fields);
+        const { title, body, categories, tags, excerpt } = fields;
+
+        if (title) {
+          oldBlog.title = title;
+        }
+
+        if (excerpt) {
+          oldBlog.excerpt = smartTrim(excerpt, 60, " ", " ...");
+        }
 
         if (body) {
-          oldBlog.excerpt = smartTrim(body, 320, " ", " ...");
-          oldBlog.desc = stripHtml(body.substring(0, 160));
+          oldBlog.mdesc = stripHtml(body.substring(0, 160));
+          oldBlog.body = body;
         }
 
         if (categories) {
@@ -298,4 +315,44 @@ exports.listByUser = (req, res) => {
     .catch(err => {
       return res.status(400).json({ error: errorHandler(err) });
     });
+};
+
+exports.like = (req, res) => {
+  const slug = req.params.slug.toLowerCase();
+  Blog.findOne({ slug })
+    .select("like")
+    .then(likeData => res.json(likeData))
+    .catch(err => res.status(400).json({ error: errorHandler(err) }));
+};
+
+exports.likeUpdate = (req, res) => {
+  const slug = req.params.slug.toLowerCase();
+  // console.log(req.profile._id);
+  // console.log("slug", slug);
+  Blog.findOne({ slug })
+    .select("like")
+    .then(oldBlog => {
+      // console.log("oldBlog.like", oldBlog.like);
+      // console.log("req.profile._id", req.profile._id);
+      const checker = oldBlog.like.includes(req.profile._id);
+
+      if (checker) {
+        // oldBlog.like = oldBlog.like.filter(e => e !== req.profile._id);
+        let likeIndex = oldBlog.like.indexOf(req.profile._id);
+        oldBlog.like.splice(likeIndex, 1);
+        // console.log("1", oldBlog.like);
+      } else {
+        oldBlog.like.push(req.profile._id);
+        // console.log("2", oldBlog.like);
+      }
+
+      oldBlog
+        .save()
+        .then(result => {
+          // console.log("result", result);
+          return res.json(result);
+        })
+        .catch(err => res.status(400).json({ error: errorHandler(err) }));
+    })
+    .catch(err => res.status(400).json({ error: errorHandler(err) }));
 };

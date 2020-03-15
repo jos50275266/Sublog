@@ -96,3 +96,16 @@ exports.photo = (req, res) => {
       });
     });
 };
+
+exports.getWriterProfile = (req, res) => {
+  const username = req.params.username.toLowerCase();
+  User.findOne({ username })
+    .then(data => {
+      return res.send(data);
+    })
+    .catch(err => {
+      return res.status(400).json({
+        error: "블로그를 찾지 못했습니다."
+      });
+    });
+};

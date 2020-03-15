@@ -44,16 +44,18 @@ const CategoryListComponent = () => {
   };
 
   const deleteCategory = slug => {
-    removeCategory(slug, token).then(data => {
-      if (data.error) console.log(data.error);
-      else
-        setValues({
-          ...values,
-          name: "",
-          removed: !removed,
-          reload: !reload
-        });
-    });
+    removeCategory(slug, token)
+      .then(data => {
+        if (data.error) console.log(data.error);
+        else
+          setValues({
+            ...values,
+            name: "",
+            removed: !removed,
+            reload: !reload
+          });
+      })
+      .catch(err => console.log(err));
   };
 
   // const deleteCategory = slug => {

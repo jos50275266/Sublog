@@ -1,4 +1,5 @@
 // 3rd Party Modules
+const multer = require("multer");
 const mongoose = require("mongoose");
 const express = require("express");
 const helmet = require("helmet");
@@ -14,6 +15,7 @@ const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/user");
 const categoryRoutes = require("./routes/category");
 const tagRoutes = require("./routes/tag");
+const formRoutes = require("./routes/form");
 
 // Utils' Modules
 const { logger, stream } = require("./utils/logger");
@@ -49,12 +51,37 @@ if (process.env.NODE_ENV === "development") {
   app.use(cors({ origin: `${process.env.CLIENT_URL}` }));
 }
 
+app.use("/static", express.static(__dirname + "/uploads"));
+const storage = multer.diskStorage({
+  destination: function(req, file, cb) {
+    cb(null, "./uploads");
+  },
+  filename: function(req, file, cb) {
+    cb(null, new Date().toISOString().split(":")[0] + file.originalname);
+  }
+});
+
+const upload = multer({ storage });
+
 // Routes
 app.use("/api", blogRoutes);
 app.use("/api", authRoutes);
 app.use("/api", userRoutes);
 app.use("/api", categoryRoutes);
 app.use("/api", tagRoutes);
+app.use("/api", formRoutes);
+
+app.post("/uploadImage", upload.single("file"), (req, res) => {
+  console.log("starting upload...", req.file);
+  res.json("http://localhost:8000/static/" + req.file.filename);
+});
+
+app.use(function(err, req, res, next) {
+  console.log("hello");
+  if (err.name === "UnauthorizedError") {
+    res.status(401).send("invalid token...");
+  }
+});
 
 const port = process.env.PORT || 8000;
 app.listen(port, () => {

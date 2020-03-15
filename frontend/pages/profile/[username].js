@@ -4,6 +4,7 @@ import Layout from "../../components/Layout";
 import { userPublicProfile } from "../../actions/user";
 import { API, DOMAIN, APP_NAME, FB_APP_ID } from "../../config";
 import moment from "moment";
+import ContactForm from "./../../components/form/ContactForm";
 
 const UserProfile = ({ user, blogs, query }) => {
   const head = () => (
@@ -19,13 +20,10 @@ const UserProfile = ({ user, blogs, query }) => {
       <meta property="og:url" content={`${DOMAIN}/profile/${query.username}`} />
       <meta property="og:site_name" content={`${APP_NAME}`} />
 
-      <meta
-        property="og:image"
-        content={`${DOMAIN}/static/images/seoblog.jpg`}
-      />
+      <meta property="og:image" content={`${DOMAIN}/public/page.jpg`} />
       <meta
         property="og:image:secure_url"
-        content={`${DOMAIN}/static/images/seoblog.jpg`}
+        content={`${DOMAIN}/public/page.jpg`}
       />
       <meta property="og:image:type" content="image/jpg" />
       <meta property="fb:app_id" content={`${FB_APP_ID}`} />
@@ -54,19 +52,25 @@ const UserProfile = ({ user, blogs, query }) => {
               <div className="card">
                 <div className="card-body">
                   <div className="row">
-                    <div className="col-md-8">
-                      <h5>{user.name}</h5>
-                      <p className="text-muted">
-                        Joined {moment(user.createdAt).fromNow()}
-                      </p>
-                    </div>
                     <div className="col-md-4">
                       <img
                         src={`${API}/user/photo/${user.username}`}
                         className="img img-fluid img-thumbnail mb-3"
-                        style={{ maxHeight: "100px", maxWidth: "100%" }}
+                        style={{ maxHeight: "450px", maxWidth: "100%" }}
                         alt="user profile"
                       />
+                    </div>
+                    <div className="col-md-8">
+                      <h5>{user.name}</h5>
+                      <p className="text-muted">
+                        {moment(user.createdAt).fromNow()} 가입했습니다.
+                      </p>
+
+                      <h5 className="card-title bg-primary pt-4 pb-4 pl-4 pr-4 text-white mt-4">
+                        {user.name}님이 최근 작성한 글
+                      </h5>
+
+                      {showUserBlogs()}
                     </div>
                   </div>
                 </div>
@@ -83,7 +87,7 @@ const UserProfile = ({ user, blogs, query }) => {
               <div className="card">
                 <div className="card-body">
                   <h5 className="card-title bg-primary pt-4 pb-4 pl-4 pr-4 text-white">
-                    Recent blogs by {user.name}
+                    {user.name}님이 최근 작성한 글
                   </h5>
 
                   {showUserBlogs()}
@@ -95,10 +99,10 @@ const UserProfile = ({ user, blogs, query }) => {
               <div className="card">
                 <div className="card-body">
                   <h5 className="card-title bg-primary pt-4 pb-4 pl-4 pr-4 text-light">
-                    Message {user.name}
+                    {user.name} 연락처
                   </h5>
                   <br />
-                  <p>contact form</p>
+                  <ContactForm authorEmail={user.email} />
                 </div>
               </div>
             </div>
@@ -110,10 +114,12 @@ const UserProfile = ({ user, blogs, query }) => {
 };
 
 UserProfile.getInitialProps = ({ query }) => {
-  return userPublicProfile(query.username).then(data => {
-    if (data.error) console.log(data.error);
-    else return { user: data.user, blogs: data.blogs, query };
-  });
+  return userPublicProfile(query.username)
+    .then(data => {
+      if (data.error) console.log(data.error);
+      else return { user: data.user, blogs: data.blogs, query };
+    })
+    .catch(err => console.log(err));
 };
 
 export default UserProfile;

@@ -14,14 +14,16 @@ const Search = () => {
 
   const searchSubmit = e => {
     e.preventDefault();
-    listSearch({ search }).then(data => {
-      setValues({
-        ...values,
-        results: data,
-        searched: true,
-        message: `${data.length}개의 글이 발견됬습니다.`
-      });
-    });
+    listSearch({ search })
+      .then(data => {
+        setValues({
+          ...values,
+          results: data,
+          searched: true,
+          message: `${data.length}개의 글이 발견됬습니다.`
+        });
+      })
+      .catch(err => console.log(err));
   };
 
   const handleChange = e => {

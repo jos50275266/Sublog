@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Router from "next/router";
 import NProgress from "nprogress";
 import { APP_NAME } from "../config";
 import { logout, isAuth } from "../actions/auth";
+
 // Document에 link를 이용하거나 아래와 같이 node_modules을 이용할 수 있다.
 // 하지만 이 방식은 React 에서는 가능하지만 next에서는 안된다.
 // 하지만, next.config.js의 설정을 변경해주면 가능하다.
@@ -28,18 +29,21 @@ Router.onRouteChangeError = url => NProgress.done();
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [name, setName] = useState("");
 
   const toggle = () => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+    if (isAuth()) setName(isAuth().name);
+  }, [name]);
+
   return (
     <header>
       <Navbar color="light" light expand="md">
         <Link href="/">
-          <NavLink className="font-weight-bold">
-            <i className="fas fa-dragon">{APP_NAME}</i>
-          </NavLink>
+          <NavLink className="font-weight-bold">{APP_NAME}</NavLink>
         </Link>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
@@ -48,6 +52,11 @@ const Header = () => {
               <NavItem>
                 <Link href="/blogs">
                   <NavLink>Sulog</NavLink>
+                </Link>
+              </NavItem>
+              <NavItem>
+                <Link href="/contact">
+                  <NavLink>Contact</NavLink>
                 </Link>
               </NavItem>
               <NavItem>
@@ -75,7 +84,7 @@ const Header = () => {
             {isAuth() && isAuth().role === 0 && (
               <NavItem>
                 <Link href="/user">
-                  <NavLink>{`${isAuth().name}`}</NavLink>
+                  <NavLink>{`${name}`}</NavLink>
                 </Link>
               </NavItem>
             )}
@@ -83,35 +92,41 @@ const Header = () => {
             {isAuth() && isAuth().role === 1 && (
               <NavItem>
                 <Link href="/admin">
-                  <NavLink>{`${isAuth().name}`}</NavLink>
+                  <NavLink>{`${name}`}</NavLink>
                 </Link>
               </NavItem>
             )}
 
             {isAuth() && (
-              <NavItem>
-                <NavLink
-                  style={{ cursor: "pointer" }}
-                  onClick={() => logout(() => Router.replace(`/signin`))}
-                >
-                  로그아웃
-                </NavLink>
-              </NavItem>
+              <React.Fragment>
+                <NavItem>
+                  <NavLink
+                    onClick={() => logout(() => Router.replace(`/signin`))}
+                  >
+                    로그아웃
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                    <a href="/user/crud/blog" className="btn btn-primary text-light">글쓰기</a>
+                </NavItem>
+              </React.Fragment>
             )}
-
-            <NavItem>
-              <NavLink
-                href="/user/crud/blog"
-                className="btn btn-primary text-light"
-              >
-                글쓰기
-              </NavLink>
-            </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
     </header>
   );
 };
+
+/** 글쓰기 Draft-js가 제대로 안뜨는 것을 방지하기위해 새로고침으로 
+ * <NavLink></NavLink> 대신에 a 태그 사용, 완전한 reloading을 위해
+  
+              <NavLink
+                href="/user/crud/blog"
+                className="btn btn-primary text-light"
+              >
+                글쓰기
+              </NavLink>
+ */
 
 export default Header;

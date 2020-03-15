@@ -35,7 +35,9 @@ const Category = ({ category, blogs, query }) => {
         <main>
           <div className="container-fluid text-center">
             <header>
-              <h1 className="display-4 font-weight-bold">{category.name}</h1>
+              <h1 className="display-4 font-weight-bold mb-5">
+                {category.name}
+              </h1>
               <article className="row">
                 {blogs.map((b, i) => (
                   <Card key={i} blog={b} />
@@ -50,13 +52,16 @@ const Category = ({ category, blogs, query }) => {
 };
 
 Category.getInitialProps = ({ query }) => {
-  return singleCategory(query.slug).then(data => {
-    if (data.error) {
-      console.log(data.error);
-    } else {
-      return { category: data.category, blogs: data.blogs, query };
-    }
-  });
+  return singleCategory(query.slug)
+    .then(data => {
+      if (data.error) {
+        console.log(data.error);
+      } else {
+        // console.log("data", data);
+        return { category: data.category, blogs: data.blogs, query };
+      }
+    })
+    .catch(err => console.log(err));
 };
 
 export default Category;

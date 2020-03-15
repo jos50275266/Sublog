@@ -44,10 +44,12 @@ const TagListComponent = () => {
   };
 
   const deleteTag = slug => {
-    removeTag(slug, token).then(data => {
-      if (data.error) console.log(data.error);
-      else setValues({ name: "", removed: !removed, reload: !reload });
-    });
+    removeTag(slug, token)
+      .then(data => {
+        if (data.error) console.log(data.error);
+        else setValues({ name: "", removed: !removed, reload: !reload });
+      })
+      .catch(err => console.log(err));
   };
 
   const showRemoved = () => {

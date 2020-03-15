@@ -14,6 +14,7 @@
   "author": "Yongsu Jeong",
   "license": "ISC",
   "dependencies": {
+    "@sendgrid/mail": "^6.5.4",
     "bcryptjs": "^2.4.3",
     "compression": "^1.7.4",
     "cookie-parser": "^1.4.4",
@@ -24,6 +25,7 @@
     "express-validator": "^6.4.0",
     "fawn": "^2.1.5",
     "formidable": "^1.2.2",
+    "google-auth-library": "^5.10.1",
     "helmet": "^3.21.3",
     "jest": "^25.1.0",
     "jsonwebtoken": "^8.5.1",
@@ -32,6 +34,7 @@
     "mongodb": "^3.5.4",
     "mongoose": "^5.9.2",
     "morgan": "^1.9.1",
+    "multer": "^1.4.2",
     "shortid": "^2.2.15",
     "slug": "^2.1.1",
     "slugify": "^1.4.0",

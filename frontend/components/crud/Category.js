@@ -39,19 +39,23 @@ const Category = () => {
   const clickSubmit = e => {
     e.preventDefault();
     // console.log('create category', name);
-    create({ name }, token).then(data => {
-      if (data.error) {
-        console.log("data", data);
-        setValues({ ...values, error: data.error, success: false });
-      } else {
-        setValues({
-          ...values,
-          error: false,
-          success: true,
-          name: ""
-        });
-      }
-    });
+    create({ name }, token)
+      .then(data => {
+        if (data === undefined) {
+          return false;
+        } else if (data.error) {
+          console.log("data", data);
+          setValues({ ...values, error: data.error, success: false });
+        } else {
+          setValues({
+            ...values,
+            error: false,
+            success: true,
+            name: ""
+          });
+        }
+      })
+      .catch(err => console.log(err));
   };
 
   const handleChange = e => {

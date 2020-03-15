@@ -35,20 +35,22 @@ const ProfileUpdate = () => {
   } = values;
 
   const init = () => {
-    getProfile(token).then(data => {
-      if (data.error) {
-        setValues({ ...values, error: data.error });
-      } else {
-        setValues({
-          ...values,
-          username: data.username,
-          username_for_photo: data.username,
-          name: data.name,
-          email: data.email,
-          about: data.about
-        });
-      }
-    });
+    getProfile(token)
+      .then(data => {
+        if (data.error) {
+          setValues({ ...values, error: data.error });
+        } else {
+          setValues({
+            ...values,
+            username: data.username,
+            username_for_photo: data.username,
+            name: data.name,
+            email: data.email,
+            about: data.about
+          });
+        }
+      })
+      .catch(err => console.log(err));
   };
 
   useEffect(() => {
@@ -74,24 +76,26 @@ const ProfileUpdate = () => {
   const handleSubmit = e => {
     e.preventDefault();
     setValues({ ...values, loading: true });
-    update(token, userData).then(data => {
-      if (data.error) {
-        console.log("data.error", data.error);
-      } else {
-        updateUser(data, () => {
-          setValues({
-            ...values,
-            username: data.username,
-            name: data.name,
-            email: data.email,
-            about: data.about,
-            password: "",
-            success: true,
-            loading: false
+    update(token, userData)
+      .then(data => {
+        if (data.error) {
+          console.log("data.error", data.error);
+        } else {
+          updateUser(data, () => {
+            setValues({
+              ...values,
+              username: data.username,
+              name: data.name,
+              email: data.email,
+              about: data.about,
+              password: "",
+              success: true,
+              loading: false
+            });
           });
-        });
-      }
-    });
+        }
+      })
+      .catch(err => console.log(err));
   };
 
   const profileUpdateForm = () => (

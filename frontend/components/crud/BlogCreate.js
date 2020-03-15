@@ -1,3 +1,5 @@
+import Router from "next/router";
+import fetch from "isomorphic-fetch";
 // Methods
 import { getCookie } from "../../actions/authHelpers";
 import { getTags } from "../../actions/tag";
@@ -16,24 +18,12 @@ const Editor = dynamic(
   () => import("react-draft-wysiwyg").then(mod => mod.Editor),
   { ssr: false }
 );
-import { EditorState, convertToRaw } from "draft-js";
+import { EditorState, convertToRaw, convertFromRaw } from "draft-js";
 import "../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-import createImagePlugin from "draft-js-image-plugin";
-const imagePlugin = createImagePlugin();
+import draftToHtml from "draftjs-to-html";
 
 // withRouter 사용하면 props으로 router을 받을 수 있다.
 const CreateBlog = ({ router }) => {
-  const blogFromLocalStorage = () => {
-    // 아래 함수 때문에 새로고침을 눌러도 body에는 이전에 작성하던 것이 그대로 붙는다.
-    if (typeof window === "undefined") return false;
-
-    if (localStorage.getItem("blog")) {
-      return JSON.parse(localStorage.getItem("blog"));
-    } else {
-      return false;
-    }
-  };
-
   const [body, setBody] = useState(EditorState.createEmpty());
 
   const [categories, setCategories] = useState([]);
@@ -49,6 +39,7 @@ const CreateBlog = ({ router }) => {
     success: "",
     formData: "",
     title: "",
+    excerpt: "",
     hidePublishButton: false
   });
 
@@ -58,62 +49,128 @@ const CreateBlog = ({ router }) => {
     success,
     formData,
     title,
-    hidePublishButton
+    hidePublishButton,
+    excerpt
   } = values;
 
   const token = getCookie("token");
 
   useEffect(() => {
+    blogFromLS();
     setValues({ ...values, formData: new FormData() });
     initCategories();
     initTags();
   }, [router]);
 
-  const initCategories = () => {
-    getCategories().then(data => {
-      if (data.error) setValues({ ...values, error: data.error });
-      else setCategories(data);
+  const blogFromLS = () => {
+    if (typeof window === "undefined") {
+      return false;
+    }
+
+    if (localStorage.getItem("draftRaw")) {
+      const rawContentFromStore = convertFromRaw(
+        JSON.parse(localStorage.getItem("draftRaw"))
+      );
+      setBody(EditorState.createWithContent(rawContentFromStore));
+    } else {
+      setBody(EditorState.createEmpty());
+    }
+  };
+
+  const uploadImageCallBack = file => {
+    const formData = new FormData();
+    formData.append("file", file);
+
+    return new Promise((resolve, reject) => {
+      fetch("http://localhost:8000/uploadImage", {
+        method: "POST",
+        body: formData
+      })
+        .then(res => res.json())
+        .then(resData => {
+          console.log("Hello", resData);
+          resolve({ data: { link: resData } });
+        })
+        .catch(error => {
+          console.log(error);
+          reject(error.toString());
+        });
     });
   };
 
+  // const blogFromLocalStorage = () => {
+  //   // 아래 함수 때문에 새로고침을 눌러도 body에는 이전에 작성하던 것이 그대로 붙는다.
+  //   if (typeof window === "undefined") return false;
+
+  //   if (localStorage.getItem("blog")) {
+  //     return JSON.parse(localStorage.getItem("blog"));
+  //   } else {
+  //     return false;
+  //   }
+  // };
+  // https://stackoverflow.com/questions/55354720/how-to-read-draftjs-state-from-localstorage
+  const saveRawContentToLocalStorage = e => {
+    if (typeof window !== "undefined") {
+      const contentState = body.getCurrentContent();
+      const rawContent = convertToRaw(contentState);
+      window.localStorage.setItem("draftRaw", JSON.stringify(rawContent));
+    }
+  };
+
+  const initCategories = () => {
+    getCategories()
+      .then(data => {
+        if (data.error) setValues({ ...values, error: data.error });
+        else setCategories(data);
+      })
+      .catch(err => console.log(err));
+  };
+
   const initTags = () => {
-    getTags().then(data => {
-      if (data.error) setValues({ ...values, error: data.error });
-      else setTags(data);
-    });
+    getTags()
+      .then(data => {
+        if (data.error) setValues({ ...values, error: data.error });
+        else setTags(data);
+      })
+      .catch(err => console.log(err));
   };
 
   const publishBlog = e => {
     e.preventDefault();
     // console.log("출판할 준비가 되었습니다.");
-    console.log("abcd", convertToRaw(body.getCurrentContent()));
-    console.log("bbbb", convertToRaw(body.getCurrentContent()).blocks[0].text);
+    // console.log("abcd", convertToRaw(body.getCurrentContent()));
+    // console.log("bbbb", convertToRaw(body.getCurrentContent()).blocks[0].text);
 
-    formData.set(
-      "excerpt",
-      JSON.stringify(convertToRaw(body.getCurrentContent()).blocks[0].text)
-    );
     formData.set(
       "body",
       JSON.stringify(convertToRaw(body.getCurrentContent()))
     );
 
-    createBlog(formData, token).then(data => {
-      if (data.error) {
-        setValues({ ...values, error: data.error });
-      } else {
-        alert("글 생성 성공!");
-        setValues({
-          ...values,
-          title: "",
-          error: "",
-          success: `${data.title} 제목의 새로운 글이 생성되었습니다.`
-        });
-        setBody(EditorState.createEmpty()); //setBody is synchronous with localStorage
-        setCategories([]);
-        setTags([]);
-      }
-    });
+    createBlog(formData, token)
+      .then(data => {
+        if (data === undefined) {
+          return false;
+        } else if (data.error) {
+          setValues({ ...values, error: data.error });
+        } else {
+          console.log("body", body);
+          alert("글 생성 성공!");
+          window.localStorage.removeItem("draftRaw");
+          setValues({
+            ...values,
+            title: "",
+            error: "",
+            success: `${data.title} 제목의 새로운 글이 생성되었습니다.`
+          });
+          setBody(EditorState.createEmpty()); //setBody is synchronous with localStorage
+          setCategories([]);
+          setTags([]);
+          setTimeout(() => {
+            Router.push("/blogs");
+          }, 1000);
+        }
+      })
+      .catch(err => console.log(err));
   };
 
   const handleChange = name => e => {
@@ -129,13 +186,13 @@ const CreateBlog = ({ router }) => {
     });
   };
 
-  const handleBody = e => {
-    setBody(e);
-    formData.set("body", e);
-    if (typeof window !== "undefined") {
-      localStorage.setItem("blog", JSON.stringify(e));
-    }
-  };
+  // const handleBody = e => {
+  //   setBody(e);
+  //   formData.set("body", e);
+  //   if (typeof window !== "undefined") {
+  //     localStorage.setItem("blog", JSON.stringify(e));
+  //   }
+  // };
 
   const handleCategoriesToggle = category => () => {
     setValues({ ...values, error: "" });
@@ -221,7 +278,7 @@ const CreateBlog = ({ router }) => {
     return (
       <form onSubmit={publishBlog}>
         <div className="form-group">
-          <label className="text-muted">Title</label>
+          <label className="text-muted">제목</label>
           <input
             type="text"
             className="form-control"
@@ -229,9 +286,18 @@ const CreateBlog = ({ router }) => {
             onChange={handleChange("title")}
           />
         </div>
-
+        <div className="form-group">
+          <label className="text-muted">소개</label>
+          <input
+            type="text"
+            className="form-control"
+            value={excerpt}
+            onChange={handleChange("excerpt")}
+          />
+        </div>
         <div className="form-group">
           <Editor
+            onChange={saveRawContentToLocalStorage}
             editorState={body}
             wrapperClassName="wrapper-class"
             editorClassName="editor-class"
@@ -239,7 +305,18 @@ const CreateBlog = ({ router }) => {
             wrapperStyle={{ border: "2px solid green", marginBottom: "20px" }}
             editorStyle={{ height: "300px", padding: "10px" }}
             onEditorStateChange={editorState => setBody(editorState)}
-            plugins={[imagePlugin]}
+            toolbar={{
+              image: {
+                previewImage: true,
+                uploadCallback: uploadImageCallBack,
+                alt: { present: true, mandatory: false }
+              }
+            }}
+          />
+          <textarea
+            disabled
+            style={{ width: "100%" }}
+            value={draftToHtml(convertToRaw(body.getCurrentContent()))}
           />
         </div>
 
@@ -307,3 +384,16 @@ export default withRouter(CreateBlog);
 // placeholder="흥미로운 이야기를 공유해주세요..."
 // onChange={handleBody}
 // />
+
+// toolbar={{
+//   image: {
+//     urlEnabled: true,
+//     uploadEnabled: true,
+//     previewImage: true,
+//     uploadCallback: uploadImageCallBack,
+//     alignmentEnabled: true,
+//     alt: { present: true, mandatory: true }
+//   },
+//   inputAccept:
+//     "application/pdf,text/plain,application/vnd.openxmlformatsofficedocument.wordprocessingml.document,application/msword,application/vnd.ms-excel,image/gif,image/jpeg,image/jpg,image/png,image/svg"
+// }}

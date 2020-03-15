@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { signin, authenticate, isAuth } from "../../actions/auth";
 import Router from "next/router";
+import Link from "next/link";
+import LoginGoogle from "./LoginGoogle";
 
 const SigninComponent = () => {
   const [values, setValues] = useState({
@@ -24,15 +26,17 @@ const SigninComponent = () => {
     setValues({ ...values, loading: true, error: false });
     const user = { email, password };
 
-    signin(user).then(data => {
-      if (data.error)
-        setValues({ ...values, error: data.error, loading: false });
-      else
-        authenticate(data, () => {
-          if (isAuth() && isAuth().role === 1) Router.push("/admin");
-          else Router.push("/user");
-        });
-    });
+    signin(user)
+      .then(data => {
+        if (data.error)
+          setValues({ ...values, error: data.error, loading: false });
+        else
+          authenticate(data, () => {
+            if (isAuth() && isAuth().role === 1) Router.push("/admin");
+            else Router.push("/user");
+          });
+      })
+      .catch(err => console.log(err));
   };
 
   const handleChange = name => e => {
@@ -81,7 +85,12 @@ const SigninComponent = () => {
       {showError()}
       {showLoading()}
       {showMessage()}
+      <LoginGoogle />
       {showForm && signinForm()}
+      <br />
+      <Link href="/auth/password/forgot">
+        <a className="btn btn-outline-danger btn-sm">Forgot Password</a>
+      </Link>
     </React.Fragment>
   );
 };

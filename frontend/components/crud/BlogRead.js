@@ -16,26 +16,29 @@ const BlogRead = ({ username }) => {
   }, []);
 
   const loadBlogs = () => {
-    list(username).then(data => {
-      if (data.error) {
-        console.log(data.error);
-      } else {
-        setBlogs(data);
-      }
-    });
+    list(username)
+      .then(data => {
+        if (data.error) {
+          console.log(data.error);
+        } else {
+          setBlogs(data);
+        }
+      })
+      .catch(err => console.log(err));
   };
 
   const deleteBlog = slug => {
-    console.log("slug", slug);
-    removeBlog(slug, token).then(data => {
-      if (data.error) {
-        setMessage(data.error);
-        console.log(data.error);
-      } else {
-        setMessage(data.message);
-        loadBlogs();
-      }
-    });
+    removeBlog(slug, token)
+      .then(data => {
+        if (data.error) {
+          setMessage(data.error);
+          console.log(data.error);
+        } else {
+          setMessage(data.message);
+          loadBlogs();
+        }
+      })
+      .catch(err => console.log(err));
   };
 
   const deleteConfirm = slug => {
@@ -67,8 +70,8 @@ const BlogRead = ({ username }) => {
         <div key={i} className="pb-5">
           <h3>{blog.title}</h3>
           <p className="mark">
-            By {blog.postedBy.name} | Published on
-            {moment(blog.updatedAt).fromNow()}
+            <b>By</b> {blog.postedBy.name} | &nbsp;
+            {moment(blog.updatedAt).fromNow()} 작성됨.
           </p>
           <button
             className="btn btn-sm btn-danger"

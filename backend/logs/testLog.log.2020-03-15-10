@@ -1,0 +1,628 @@
+2020-03-15T01:00:19.726Z [CustomLogger] info: [0mGET /api/blog/photo/undefined [33m400 [0m213.547 ms - 12[0m
+
+2020-03-15T01:00:21.909Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m196.590 ms - -[0m
+
+2020-03-15T01:00:22.178Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m467.738 ms - -[0m
+
+2020-03-15T01:00:22.360Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-2 [36m304 [0m601.915 ms - -[0m
+
+2020-03-15T01:00:22.483Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m312.025 ms - -[0m
+
+2020-03-15T01:00:22.876Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [36m304 [0m1070.679 ms - -[0m
+
+2020-03-15T01:00:23.457Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m1245.724 ms - -[0m
+
+2020-03-15T01:00:24.146Z [CustomLogger] info: [0mGET /static/2020-03-15T00KakaoTalk_20200310_235113106_10.jpg [36m304 [0m0.840 ms - -[0m
+
+2020-03-15T01:00:31.499Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m222.491 ms - -[0m
+
+2020-03-15T01:00:31.889Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m605.760 ms - -[0m
+
+2020-03-15T01:00:32.398Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [36m304 [0m1125.652 ms - -[0m
+
+2020-03-15T01:00:40.375Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m196.259 ms - -[0m
+
+2020-03-15T01:00:40.393Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m215.321 ms - -[0m
+
+2020-03-15T01:00:40.578Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m194.863 ms - -[0m
+
+2020-03-15T01:00:41.536Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m1138.452 ms - -[0m
+
+2020-03-15T01:00:41.628Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [36m304 [0m1448.947 ms - -[0m
+
+2020-03-15T01:00:42.382Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [36m304 [0m441.765 ms - -[0m
+
+2020-03-15T01:00:43.509Z [CustomLogger] info: [0mGET /static/2020-03-15T00KakaoTalk_20200310_235113106_10.jpg [36m304 [0m0.807 ms - -[0m
+
+2020-03-15T01:00:49.344Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m194.593 ms - -[0m
+
+2020-03-15T01:00:49.917Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m768.174 ms - -[0m
+
+2020-03-15T01:00:51.237Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [36m304 [0m2091.296 ms - -[0m
+
+2020-03-15T01:01:14.758Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m206.266 ms - -[0m
+
+2020-03-15T01:01:15.174Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m623.502 ms - -[0m
+
+2020-03-15T01:01:15.203Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [36m304 [0m655.383 ms - -[0m
+
+2020-03-15T01:01:15.389Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m196.790 ms - -[0m
+
+2020-03-15T01:01:15.795Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m494.590 ms - -[0m
+
+2020-03-15T01:01:16.227Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [36m304 [0m922.612 ms - -[0m
+
+2020-03-15T01:01:17.147Z [CustomLogger] info: [0mGET /static/2020-03-15T00KakaoTalk_20200310_235113106_10.jpg [36m304 [0m0.856 ms - -[0m
+
+2020-03-15T01:01:21.381Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m203.443 ms - -[0m
+
+2020-03-15T01:01:21.388Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m214.609 ms - -[0m
+
+2020-03-15T01:01:21.596Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [36m304 [0m425.371 ms - -[0m
+
+2020-03-15T01:01:31.196Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m202.794 ms - -[0m
+
+2020-03-15T01:01:32.293Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m1300.997 ms - -[0m
+
+2020-03-15T01:01:33.114Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [36m304 [0m2123.738 ms - -[0m
+
+2020-03-15T01:01:33.302Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m197.299 ms - -[0m
+
+2020-03-15T01:01:33.322Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m215.028 ms - -[0m
+
+2020-03-15T01:01:33.615Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [36m304 [0m423.770 ms - -[0m
+
+2020-03-15T01:01:51.263Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m189.604 ms - -[0m
+
+2020-03-15T01:01:51.332Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m257.119 ms - -[0m
+
+2020-03-15T01:01:51.649Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [36m304 [0m577.021 ms - -[0m
+
+2020-03-15T01:01:58.293Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m204.276 ms - -[0m
+
+2020-03-15T01:01:58.306Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m218.520 ms - -[0m
+
+2020-03-15T01:01:58.512Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [36m304 [0m427.634 ms - -[0m
+
+2020-03-15T01:02:09.858Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m203.019 ms - -[0m
+
+2020-03-15T01:02:11.199Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m1545.897 ms - -[0m
+
+2020-03-15T01:02:11.468Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [36m304 [0m1816.748 ms - -[0m
+
+2020-03-15T01:02:33.149Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m206.661 ms - -[0m
+
+2020-03-15T01:02:33.158Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m216.652 ms - -[0m
+
+2020-03-15T01:02:33.369Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [36m304 [0m430.709 ms - -[0m
+
+2020-03-15T01:02:33.889Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m663.344 ms - -[0m
+
+2020-03-15T01:02:34.194Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m966.536 ms - -[0m
+
+2020-03-15T01:02:34.702Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [36m304 [0m824.341 ms - -[0m
+
+2020-03-15T01:02:35.914Z [CustomLogger] info: [0mGET /static/2020-03-15T00KakaoTalk_20200310_235113106_10.jpg [36m304 [0m0.950 ms - -[0m
+
+2020-03-15T01:02:37.966Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m197.284 ms - -[0m
+
+2020-03-15T01:02:38.011Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m243.760 ms - -[0m
+
+2020-03-15T01:02:38.237Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [36m304 [0m471.952 ms - -[0m
+
+2020-03-15T01:02:43.194Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m204.556 ms - -[0m
+
+2020-03-15T01:02:43.201Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m217.409 ms - -[0m
+
+2020-03-15T01:02:44.021Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [36m304 [0m1038.829 ms - -[0m
+
+2020-03-15T01:03:00.279Z [CustomLogger] info: [0mGET /api/cpqwfsuf/blogs [36m304 [0m1422.228 ms - -[0m
+
+2020-03-15T01:03:03.680Z [CustomLogger] info: [0mGET /api/blog/photo/undefined [33m400 [0m192.271 ms - 12[0m
+
+2020-03-15T01:03:04.600Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m196.958 ms - -[0m
+
+2020-03-15T01:03:04.607Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m216.397 ms - -[0m
+
+2020-03-15T01:03:04.796Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m192.378 ms - -[0m
+
+2020-03-15T01:03:04.804Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m192.444 ms - -[0m
+
+2020-03-15T01:03:04.988Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [36m304 [0m505.569 ms - -[0m
+
+2020-03-15T01:03:05.085Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-2 [36m304 [0m667.946 ms - -[0m
+
+2020-03-15T01:03:05.546Z [CustomLogger] info: [0mGET /static/2020-03-15T00KakaoTalk_20200310_235113106_10.jpg [36m304 [0m0.590 ms - -[0m
+
+2020-03-15T01:04:35.223Z [CustomLogger] info: [0mGET /api/blog/photo/undefined [33m400 [0m197.002 ms - 12[0m
+
+2020-03-15T01:04:36.944Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m217.891 ms - -[0m
+
+2020-03-15T01:04:36.966Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m231.880 ms - -[0m
+
+2020-03-15T01:04:37.148Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m200.561 ms - -[0m
+
+2020-03-15T01:04:37.186Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m217.123 ms - -[0m
+
+2020-03-15T01:04:37.351Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [36m304 [0m502.128 ms - -[0m
+
+2020-03-15T01:04:37.539Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-2 [36m304 [0m779.115 ms - -[0m
+
+2020-03-15T01:04:38.409Z [CustomLogger] info: [0mGET /static/2020-03-15T00KakaoTalk_20200310_235113106_10.jpg [36m304 [0m0.763 ms - -[0m
+
+2020-03-15T01:06:09.832Z [CustomLogger] info: Server is running on port 8000
+2020-03-15T01:06:11.062Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-03-15T01:06:16.081Z [CustomLogger] info: Server is running on port 8000
+2020-03-15T01:06:18.746Z [CustomLogger] info: Server is running on port 8000
+2020-03-15T01:06:19.982Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-03-15T01:06:24.385Z [CustomLogger] info: Server is running on port 8000
+2020-03-15T01:06:25.674Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-03-15T01:06:29.599Z [CustomLogger] info: Server is running on port 8000
+2020-03-15T01:06:31.069Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-03-15T01:06:36.156Z [CustomLogger] info: Server is running on port 8000
+2020-03-15T01:06:37.567Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-03-15T01:07:06.687Z [CustomLogger] info: Server is running on port 8000
+2020-03-15T01:07:07.909Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-03-15T01:08:10.435Z [CustomLogger] info: [0mGET /api/blog/photo/undefined [33m400 [0m215.106 ms - 12[0m
+
+2020-03-15T01:08:11.002Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m202.974 ms - -[0m
+
+2020-03-15T01:08:11.031Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m226.469 ms - -[0m
+
+2020-03-15T01:08:11.206Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m201.278 ms - -[0m
+
+2020-03-15T01:08:11.258Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m224.634 ms - -[0m
+
+2020-03-15T01:08:11.430Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-2 [36m304 [0m608.704 ms - -[0m
+
+2020-03-15T01:08:11.479Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [36m304 [0m612.121 ms - -[0m
+
+2020-03-15T01:08:12.047Z [CustomLogger] info: [0mGET /static/2020-03-15T00KakaoTalk_20200310_235113106_10.jpg [36m304 [0m2.213 ms - -[0m
+
+2020-03-15T01:09:13.848Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m204.956 ms - -[0m
+
+2020-03-15T01:09:13.852Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m213.986 ms - -[0m
+
+2020-03-15T01:09:14.061Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [36m304 [0m427.875 ms - -[0m
+
+2020-03-15T01:09:22.740Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m204.635 ms - -[0m
+
+2020-03-15T01:09:23.095Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m557.168 ms - -[0m
+
+2020-03-15T01:09:23.406Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [36m304 [0m874.141 ms - -[0m
+
+2020-03-15T01:09:29.646Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m327.983 ms - -[0m
+
+2020-03-15T01:09:29.662Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m209.129 ms - -[0m
+
+2020-03-15T01:09:29.767Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [36m304 [0m451.368 ms - -[0m
+
+2020-03-15T01:09:34.238Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m204.307 ms - -[0m
+
+2020-03-15T01:09:34.713Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m676.470 ms - -[0m
+
+2020-03-15T01:09:34.903Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [36m304 [0m875.147 ms - -[0m
+
+2020-03-15T01:11:36.251Z [CustomLogger] info: Server is running on port 8000
+2020-03-15T01:11:37.513Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-03-15T01:11:38.882Z [CustomLogger] info: [0mGET /api/blog/photo/undefined [33m400 [0m2100.712 ms - 12[0m
+
+2020-03-15T01:11:39.065Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m1718.072 ms - -[0m
+
+2020-03-15T01:11:39.253Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m1900.226 ms - -[0m
+
+2020-03-15T01:11:39.304Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-2 [36m304 [0m1937.664 ms - -[0m
+
+2020-03-15T01:11:39.448Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m380.484 ms - -[0m
+
+2020-03-15T01:11:39.467Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [32m200 [0m2046.067 ms - 11079[0m
+
+2020-03-15T01:11:39.473Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m217.910 ms - -[0m
+
+2020-03-15T01:11:39.870Z [CustomLogger] info: [0mGET /static/2020-03-15T00KakaoTalk_20200310_235113106_10.jpg [36m304 [0m2.045 ms - -[0m
+
+2020-03-15T01:11:45.824Z [CustomLogger] info: [0mGET /api/blog/photo/undefined [33m400 [0m220.909 ms - 12[0m
+
+2020-03-15T01:11:46.259Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m191.826 ms - -[0m
+
+2020-03-15T01:11:46.297Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m227.770 ms - -[0m
+
+2020-03-15T01:11:46.522Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m261.549 ms - -[0m
+
+2020-03-15T01:11:46.527Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m227.565 ms - -[0m
+
+2020-03-15T01:11:46.774Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-2 [36m304 [0m689.789 ms - -[0m
+
+2020-03-15T01:11:46.794Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [36m304 [0m684.751 ms - -[0m
+
+2020-03-15T01:11:47.281Z [CustomLogger] info: [0mGET /static/2020-03-15T00KakaoTalk_20200310_235113106_10.jpg [36m304 [0m1.028 ms - -[0m
+
+2020-03-15T01:12:24.440Z [CustomLogger] info: [0mGET /api/blog/photo/undefined [33m400 [0m195.227 ms - 12[0m
+
+2020-03-15T01:12:25.133Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m195.092 ms - -[0m
+
+2020-03-15T01:12:25.160Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m219.853 ms - -[0m
+
+2020-03-15T01:12:25.453Z [CustomLogger] info: [0mGET /api/categories [36m304 [0m192.581 ms - -[0m
+
+2020-03-15T01:12:25.462Z [CustomLogger] info: [0mGET /api/tags [36m304 [0m201.124 ms - -[0m
+
+2020-03-15T01:12:25.645Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-2 [36m304 [0m607.791 ms - -[0m
+
+2020-03-15T01:12:25.647Z [CustomLogger] info: [0mGET /static/2020-03-15T00KakaoTalk_20200310_235113106_10.jpg [36m304 [0m0.600 ms - -[0m
+
+2020-03-15T01:12:25.706Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [36m304 [0m448.406 ms - -[0m
+
+2020-03-15T01:12:32.005Z [CustomLogger] info: [0mOPTIONS /api/user/blog/test-case-2 [32m204 [0m0.411 ms - 0[0m
+
+2020-03-15T01:12:34.488Z [CustomLogger] info: [0mPUT /api/user/blog/test-case-2 [32m200 [0m2480.388 ms - 260405[0m
+
+2020-03-15T01:12:40.871Z [CustomLogger] info: [0mPOST /api/blogs-categories-tags [32m200 [0m854.389 ms - 4076[0m
+
+2020-03-15T01:12:41.343Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-3 [36m304 [0m384.867 ms - -[0m
+
+2020-03-15T01:12:41.577Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-2 [36m304 [0m616.725 ms - -[0m
+
+2020-03-15T01:12:41.666Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-1 [36m304 [0m703.385 ms - -[0m
+
+2020-03-15T01:12:59.807Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [32m200 [0m450.719 ms - 11144[0m
+
+2020-03-15T01:13:01.576Z [CustomLogger] info: [0mGET /static/2020-03-15T00KakaoTalk_20200310_235113106_10.jpg [36m304 [0m1.083 ms - -[0m
+
+2020-03-15T01:13:01.758Z [CustomLogger] info: [0mGET /api/user/photo/undefined [33m400 [0m196.175 ms - 48[0m
+
+2020-03-15T01:13:01.916Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-2 [36m304 [0m687.975 ms - -[0m
+
+2020-03-15T01:13:04.482Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.248 ms - 0[0m
+
+2020-03-15T01:13:04.925Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m441.156 ms - 613[0m
+
+2020-03-15T01:13:05.285Z [CustomLogger] info: [0mGET /api/user/writer/cpqwfsuf [36m304 [0m805.303 ms - -[0m
+
+2020-03-15T01:13:05.729Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-3 [36m304 [0m442.286 ms - -[0m
+
+2020-03-15T01:13:05.877Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-1 [36m304 [0m621.863 ms - -[0m
+
+2020-03-15T01:13:06.266Z [CustomLogger] info: [0mGET /api/user/photo/cpqwfsuf [36m304 [0m792.311 ms - -[0m
+
+2020-03-15T01:15:27.503Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.265 ms - 0[0m
+
+2020-03-15T01:15:28.010Z [CustomLogger] info: [0mGET /api/user/photo/undefined [33m400 [0m677.416 ms - 48[0m
+
+2020-03-15T01:15:28.833Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m831.143 ms - 613[0m
+
+2020-03-15T01:15:29.659Z [CustomLogger] info: [0mGET /api/user/writer/cpqwfsuf [36m304 [0m1041.646 ms - -[0m
+
+2020-03-15T01:15:33.599Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.250 ms - 0[0m
+
+2020-03-15T01:15:33.717Z [CustomLogger] info: [0mGET /api/user/photo/undefined [33m400 [0m282.335 ms - 48[0m
+
+2020-03-15T01:15:34.145Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m434.741 ms - 613[0m
+
+2020-03-15T01:15:34.507Z [CustomLogger] info: [0mGET /api/user/writer/cpqwfsuf [36m304 [0m792.506 ms - -[0m
+
+2020-03-15T01:15:38.538Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [32m200 [0m450.005 ms - 11144[0m
+
+2020-03-15T01:15:39.109Z [CustomLogger] info: [0mGET /static/2020-03-15T00KakaoTalk_20200310_235113106_10.jpg [36m304 [0m0.931 ms - -[0m
+
+2020-03-15T01:15:39.326Z [CustomLogger] info: [0mGET /api/user/photo/undefined [33m400 [0m220.540 ms - 48[0m
+
+2020-03-15T01:15:39.446Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-2 [36m304 [0m598.841 ms - -[0m
+
+2020-03-15T01:15:41.060Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.269 ms - 0[0m
+
+2020-03-15T01:15:41.618Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m555.880 ms - 613[0m
+
+2020-03-15T01:15:42.075Z [CustomLogger] info: [0mGET /api/user/writer/cpqwfsuf [36m304 [0m1018.427 ms - -[0m
+
+2020-03-15T01:15:42.621Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-3 [36m304 [0m393.585 ms - -[0m
+
+2020-03-15T01:15:42.914Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-1 [36m304 [0m690.020 ms - -[0m
+
+2020-03-15T01:15:43.428Z [CustomLogger] info: [0mGET /api/user/photo/cpqwfsuf [36m304 [0m791.316 ms - -[0m
+
+2020-03-15T01:15:49.467Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.298 ms - 0[0m
+
+2020-03-15T01:15:49.800Z [CustomLogger] info: [0mGET /api/user/photo/undefined [33m400 [0m445.981 ms - 48[0m
+
+2020-03-15T01:15:50.638Z [CustomLogger] info: [0mGET /api/user/writer/cpqwfsuf [36m304 [0m840.945 ms - -[0m
+
+2020-03-15T01:15:51.414Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m1101.285 ms - 613[0m
+
+2020-03-15T01:16:38.275Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [32m200 [0m422.861 ms - 11144[0m
+
+2020-03-15T01:16:38.878Z [CustomLogger] info: [0mGET /static/2020-03-15T00KakaoTalk_20200310_235113106_10.jpg [36m304 [0m2.634 ms - -[0m
+
+2020-03-15T01:16:39.071Z [CustomLogger] info: [0mGET /api/user/photo/undefined [33m400 [0m194.372 ms - 48[0m
+
+2020-03-15T01:16:39.311Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-2 [36m304 [0m684.051 ms - -[0m
+
+2020-03-15T01:16:39.871Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.207 ms - 0[0m
+
+2020-03-15T01:16:40.293Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m419.708 ms - 613[0m
+
+2020-03-15T01:16:40.654Z [CustomLogger] info: [0mGET /api/user/writer/cpqwfsuf [36m304 [0m784.127 ms - -[0m
+
+2020-03-15T01:16:40.959Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-3 [36m304 [0m440.745 ms - -[0m
+
+2020-03-15T01:16:41.143Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-1 [36m304 [0m628.840 ms - -[0m
+
+2020-03-15T01:16:41.682Z [CustomLogger] info: [0mGET /api/user/photo/cpqwfsuf [36m304 [0m779.553 ms - -[0m
+
+2020-03-15T01:17:08.999Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [32m200 [0m449.371 ms - 11144[0m
+
+2020-03-15T01:17:09.901Z [CustomLogger] info: [0mGET /static/2020-03-15T00KakaoTalk_20200310_235113106_10.jpg [36m304 [0m1.629 ms - -[0m
+
+2020-03-15T01:17:10.124Z [CustomLogger] info: [0mGET /api/user/photo/undefined [33m400 [0m226.293 ms - 48[0m
+
+2020-03-15T01:17:10.324Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-2 [36m304 [0m605.334 ms - -[0m
+
+2020-03-15T01:17:11.627Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.220 ms - 0[0m
+
+2020-03-15T01:17:12.099Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m417.732 ms - 613[0m
+
+2020-03-15T01:17:12.410Z [CustomLogger] info: [0mGET /api/user/writer/cpqwfsuf [36m304 [0m785.891 ms - -[0m
+
+2020-03-15T01:17:12.837Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-3 [36m304 [0m393.190 ms - -[0m
+
+2020-03-15T01:17:13.126Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-1 [36m304 [0m686.920 ms - -[0m
+
+2020-03-15T01:17:13.456Z [CustomLogger] info: [0mGET /api/user/photo/cpqwfsuf [36m304 [0m795.085 ms - -[0m
+
+2020-03-15T01:17:26.899Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.210 ms - 0[0m
+
+2020-03-15T01:17:27.394Z [CustomLogger] info: [0mGET /api/user/photo/undefined [33m400 [0m610.612 ms - 48[0m
+
+2020-03-15T01:17:28.415Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m1030.309 ms - 613[0m
+
+2020-03-15T01:17:29.453Z [CustomLogger] info: [0mGET /api/user/writer/cpqwfsuf [36m304 [0m1286.971 ms - -[0m
+
+2020-03-15T01:17:35.578Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [32m200 [0m505.881 ms - 11144[0m
+
+2020-03-15T01:17:36.419Z [CustomLogger] info: [0mGET /static/2020-03-15T00KakaoTalk_20200310_235113106_10.jpg [36m304 [0m1.295 ms - -[0m
+
+2020-03-15T01:17:36.609Z [CustomLogger] info: [0mGET /api/user/photo/undefined [33m400 [0m193.890 ms - 48[0m
+
+2020-03-15T01:17:36.735Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-2 [36m304 [0m603.505 ms - -[0m
+
+2020-03-15T01:17:38.080Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.223 ms - 0[0m
+
+2020-03-15T01:17:38.517Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m434.841 ms - 613[0m
+
+2020-03-15T01:17:38.856Z [CustomLogger] info: [0mGET /api/user/writer/cpqwfsuf [36m304 [0m777.496 ms - -[0m
+
+2020-03-15T01:17:39.294Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-3 [36m304 [0m416.459 ms - -[0m
+
+2020-03-15T01:17:39.492Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-1 [36m304 [0m618.635 ms - -[0m
+
+2020-03-15T01:17:39.936Z [CustomLogger] info: [0mGET /api/user/photo/cpqwfsuf [36m304 [0m870.191 ms - -[0m
+
+2020-03-15T01:18:01.572Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.287 ms - 0[0m
+
+2020-03-15T01:18:01.726Z [CustomLogger] info: [0mGET /api/user/photo/undefined [33m400 [0m219.736 ms - 48[0m
+
+2020-03-15T01:18:01.976Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m392.975 ms - 613[0m
+
+2020-03-15T01:18:02.482Z [CustomLogger] info: [0mGET /api/user/writer/cpqwfsuf [36m304 [0m893.500 ms - -[0m
+
+2020-03-15T01:18:09.391Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.312 ms - 0[0m
+
+2020-03-15T01:18:09.472Z [CustomLogger] info: [0mGET /api/user/photo/undefined [33m400 [0m214.048 ms - 48[0m
+
+2020-03-15T01:18:09.816Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m422.808 ms - 613[0m
+
+2020-03-15T01:18:10.201Z [CustomLogger] info: [0mGET /api/user/writer/cpqwfsuf [36m304 [0m792.825 ms - -[0m
+
+2020-03-15T01:18:18.090Z [CustomLogger] info: [0mGET /api/category/frontend [32m200 [0m648.622 ms - 1769[0m
+
+2020-03-15T01:18:19.023Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-1 [36m304 [0m615.979 ms - -[0m
+
+2020-03-15T01:18:19.138Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-3 [36m304 [0m386.638 ms - -[0m
+
+2020-03-15T01:18:19.416Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-2 [36m304 [0m666.355 ms - -[0m
+
+2020-03-15T01:18:52.950Z [CustomLogger] info: [0mPOST /api/blogs-categories-tags [32m200 [0m840.208 ms - 4076[0m
+
+2020-03-15T01:18:57.268Z [CustomLogger] info: [0mGET /api/category/frontend [32m200 [0m608.289 ms - 1769[0m
+
+2020-03-15T01:18:57.994Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-3 [36m304 [0m434.120 ms - -[0m
+
+2020-03-15T01:18:58.007Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-1 [36m304 [0m618.574 ms - -[0m
+
+2020-03-15T01:18:58.163Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-2 [36m304 [0m605.422 ms - -[0m
+
+2020-03-15T01:20:01.422Z [CustomLogger] info: [0mGET /api/category/frontend [32m200 [0m637.726 ms - 1769[0m
+
+2020-03-15T01:20:02.334Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-3 [36m304 [0m394.234 ms - -[0m
+
+2020-03-15T01:20:02.431Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-1 [36m304 [0m677.137 ms - -[0m
+
+2020-03-15T01:20:02.623Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-2 [36m304 [0m685.253 ms - -[0m
+
+2020-03-15T01:20:26.198Z [CustomLogger] info: [0mGET /api/category/frontend [32m200 [0m614.279 ms - 1769[0m
+
+2020-03-15T01:20:26.964Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-1 [36m304 [0m605.967 ms - -[0m
+
+2020-03-15T01:20:27.025Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-3 [36m304 [0m405.532 ms - -[0m
+
+2020-03-15T01:20:27.219Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-2 [36m304 [0m609.348 ms - -[0m
+
+2020-03-15T01:20:57.326Z [CustomLogger] info: [0mGET /api/user/undefined [33m400 [0m240.504 ms - 54[0m
+
+2020-03-15T01:21:32.243Z [CustomLogger] info: [0mGET /api/user/undefined [33m400 [0m225.903 ms - 54[0m
+
+2020-03-15T01:22:02.670Z [CustomLogger] info: [0mGET /api/user/undefined [33m400 [0m191.661 ms - 54[0m
+
+2020-03-15T01:22:05.874Z [CustomLogger] info: [0mGET /api/user/undefined [33m400 [0m197.355 ms - 54[0m
+
+2020-03-15T01:22:20.390Z [CustomLogger] info: [0mPOST /api/blogs-categories-tags [32m200 [0m818.402 ms - 4076[0m
+
+2020-03-15T01:22:21.190Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-3 [36m304 [0m456.513 ms - -[0m
+
+2020-03-15T01:22:21.403Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-2 [36m304 [0m679.395 ms - -[0m
+
+2020-03-15T01:22:21.533Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-1 [36m304 [0m807.533 ms - -[0m
+
+2020-03-15T01:22:27.632Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [32m200 [0m436.168 ms - 11144[0m
+
+2020-03-15T01:22:29.027Z [CustomLogger] info: [0mGET /static/2020-03-15T00KakaoTalk_20200310_235113106_10.jpg [36m304 [0m2.741 ms - -[0m
+
+2020-03-15T01:22:29.259Z [CustomLogger] info: [0mGET /api/user/photo/undefined [33m400 [0m237.486 ms - 48[0m
+
+2020-03-15T01:22:29.659Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-2 [36m304 [0m754.984 ms - -[0m
+
+2020-03-15T01:22:31.464Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.212 ms - 0[0m
+
+2020-03-15T01:22:31.879Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m411.914 ms - 613[0m
+
+2020-03-15T01:22:32.260Z [CustomLogger] info: [0mGET /api/user/writer/cpqwfsuf [36m304 [0m798.034 ms - -[0m
+
+2020-03-15T01:22:32.472Z [CustomLogger] info: [0mPOST /api/blogs-categories-tags [32m200 [0m850.834 ms - 4076[0m
+
+2020-03-15T01:22:32.542Z [CustomLogger] info: [0mGET /api/user/photo/cpqwfsuf [0m- [0m- ms - -[0m
+
+2020-03-15T01:22:32.546Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-1 [0m- [0m- ms - -[0m
+
+2020-03-15T01:22:32.553Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-3 [0m- [0m- ms - -[0m
+
+2020-03-15T01:22:32.987Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-3 [32m200 [0m396.799 ms - 19337[0m
+
+2020-03-15T01:22:33.314Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-1 [32m200 [0m612.161 ms - 81589[0m
+
+2020-03-15T01:22:36.574Z [CustomLogger] info: [0mGET /api/user/cpqwfsuf [32m200 [0m1284.127 ms - 1998[0m
+
+2020-03-15T01:22:37.141Z [CustomLogger] info: [0mGET /api/user/photo/cpqwfsuf [32m200 [0m510.569 ms - 101556[0m
+
+2020-03-15T01:22:54.768Z [CustomLogger] info: [0mPOST /api/blogs-categories-tags [32m200 [0m841.779 ms - 4076[0m
+
+2020-03-15T01:22:55.310Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-3 [36m304 [0m491.929 ms - -[0m
+
+2020-03-15T01:22:55.540Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-2 [36m304 [0m718.339 ms - -[0m
+
+2020-03-15T01:22:55.608Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-1 [36m304 [0m784.488 ms - -[0m
+
+2020-03-15T01:23:03.596Z [CustomLogger] info: [0mGET /api/category/frontend [32m200 [0m654.955 ms - 1769[0m
+
+2020-03-15T01:23:04.596Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-1 [36m304 [0m696.227 ms - -[0m
+
+2020-03-15T01:23:04.905Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-3 [36m304 [0m418.470 ms - -[0m
+
+2020-03-15T01:23:05.094Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-2 [36m304 [0m609.117 ms - -[0m
+
+2020-03-15T01:24:01.618Z [CustomLogger] info: [0mGET /api/category/frontend [32m200 [0m636.671 ms - 1769[0m
+
+2020-03-15T01:24:15.308Z [CustomLogger] info: [0mGET /api/category/frontend [32m200 [0m677.473 ms - 1769[0m
+
+2020-03-15T01:24:16.027Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-3 [36m304 [0m395.076 ms - -[0m
+
+2020-03-15T01:24:16.054Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-1 [36m304 [0m627.950 ms - -[0m
+
+2020-03-15T01:24:16.316Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-2 [36m304 [0m685.628 ms - -[0m
+
+2020-03-15T01:24:36.560Z [CustomLogger] info: [0mGET /api/category/frontend [32m200 [0m635.698 ms - 1769[0m
+
+2020-03-15T01:24:51.802Z [CustomLogger] info: [0mGET /api/category/frontend [32m200 [0m634.094 ms - 1769[0m
+
+2020-03-15T01:24:52.484Z [CustomLogger] info: [0mGET /api/category/frontend [32m200 [0m628.543 ms - 1769[0m
+
+2020-03-15T01:24:53.113Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-3 [36m304 [0m383.954 ms - -[0m
+
+2020-03-15T01:24:53.219Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-1 [36m304 [0m629.499 ms - -[0m
+
+2020-03-15T01:24:53.428Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-2 [36m304 [0m708.059 ms - -[0m
+
+2020-03-15T01:25:41.759Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [32m200 [0m413.902 ms - 11144[0m
+
+2020-03-15T01:25:42.081Z [CustomLogger] info: [0mGET /static/2020-03-15T00KakaoTalk_20200310_235113106_10.jpg [36m304 [0m1.922 ms - -[0m
+
+2020-03-15T01:25:42.276Z [CustomLogger] info: [0mGET /api/user/photo/undefined [33m400 [0m196.245 ms - 48[0m
+
+2020-03-15T01:25:42.793Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-2 [36m304 [0m831.850 ms - -[0m
+
+2020-03-15T01:25:42.971Z [CustomLogger] info: [0mOPTIONS /api/blogs/related [32m204 [0m0.151 ms - 0[0m
+
+2020-03-15T01:25:43.473Z [CustomLogger] info: [0mPOST /api/blogs/related [32m200 [0m500.377 ms - 613[0m
+
+2020-03-15T01:25:43.896Z [CustomLogger] info: [0mGET /api/user/writer/cpqwfsuf [36m304 [0m927.982 ms - -[0m
+
+2020-03-15T01:25:43.936Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-3 [36m304 [0m236.514 ms - -[0m
+
+2020-03-15T01:25:44.311Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-1 [36m304 [0m615.339 ms - -[0m
+
+2020-03-15T01:25:44.846Z [CustomLogger] info: [0mGET /api/user/photo/cpqwfsuf [36m304 [0m784.745 ms - -[0m
+
+2020-03-15T01:25:51.977Z [CustomLogger] info: [0mGET /api/blog/test-case-2 [32m200 [0m422.623 ms - 11144[0m
+
+2020-03-15T01:25:52.181Z [CustomLogger] info: [0mGET /api/category/frontend [32m200 [0m628.769 ms - 1769[0m
+
+2020-03-15T01:26:30.676Z [CustomLogger] info: [0mGET /api/category/frontend [32m200 [0m631.317 ms - 1769[0m
+
+2020-03-15T01:26:31.339Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-3 [36m304 [0m440.977 ms - -[0m
+
+2020-03-15T01:26:31.491Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-1 [36m304 [0m720.613 ms - -[0m
+
+2020-03-15T01:26:31.661Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-2 [36m304 [0m769.943 ms - -[0m
+
+2020-03-15T01:27:59.133Z [CustomLogger] info: [0mGET /api/category/frontend [32m200 [0m719.055 ms - 1769[0m
+
+2020-03-15T01:28:00.105Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-1 [36m304 [0m623.990 ms - -[0m
+
+2020-03-15T01:28:00.238Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-3 [36m304 [0m390.342 ms - -[0m
+
+2020-03-15T01:28:00.512Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-2 [36m304 [0m666.404 ms - -[0m
+
+2020-03-15T01:28:08.089Z [CustomLogger] info: [0mGET /api/category/frontend [32m200 [0m634.445 ms - 1769[0m
+
+2020-03-15T01:28:08.628Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-3 [36m304 [0m389.438 ms - -[0m
+
+2020-03-15T01:28:08.781Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-1 [36m304 [0m620.976 ms - -[0m
+
+2020-03-15T01:28:08.920Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-2 [36m304 [0m683.279 ms - -[0m
+
+2020-03-15T01:28:52.662Z [CustomLogger] info: Server is running on port 8000
+2020-03-15T01:28:54.060Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-03-15T01:29:10.358Z [CustomLogger] info: [0mGET /api/category/frontend [32m200 [0m623.034 ms - 1835[0m
+
+2020-03-15T01:29:10.705Z [CustomLogger] info: [0mGET /api/category/frontend [32m200 [0m602.016 ms - 1835[0m
+
+2020-03-15T01:29:10.869Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-1 [0m- [0m- ms - -[0m
+
+2020-03-15T01:29:10.872Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-2 [0m- [0m- ms - -[0m
+
+2020-03-15T01:29:10.878Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-3 [0m- [0m- ms - -[0m
+
+2020-03-15T01:29:19.007Z [CustomLogger] info: [0mGET /api/category/frontend [32m200 [0m587.619 ms - 1835[0m
+
+2020-03-15T01:29:19.581Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-3 [32m200 [0m422.914 ms - 19337[0m
+
+2020-03-15T01:29:19.672Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-1 [32m200 [0m613.042 ms - 81589[0m
+
+2020-03-15T01:29:19.763Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-2 [32m200 [0m606.629 ms - 72403[0m
+
+2020-03-15T01:29:26.661Z [CustomLogger] info: [0mGET /api/user/cpqwfsuf [32m200 [0m1195.638 ms - 1998[0m
+
+2020-03-15T01:29:27.594Z [CustomLogger] info: [0mGET /api/user/photo/cpqwfsuf [36m304 [0m772.270 ms - -[0m
+
+2020-03-15T01:29:42.984Z [CustomLogger] info: [0mPOST /api/blogs-categories-tags [32m200 [0m807.654 ms - 4076[0m
+
+2020-03-15T01:29:43.768Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-3 [36m304 [0m405.267 ms - -[0m
+
+2020-03-15T01:29:43.981Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-1 [36m304 [0m614.025 ms - -[0m
+
+2020-03-15T01:29:44.009Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-2 [36m304 [0m643.965 ms - -[0m
+
+2020-03-15T01:29:48.549Z [CustomLogger] info: [0mPOST /api/blogs-categories-tags [32m200 [0m776.686 ms - 4076[0m
+
+2020-03-15T01:31:28.633Z [CustomLogger] info: Server is running on port 8000
+2020-03-15T01:31:30.030Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-03-15T01:31:37.226Z [CustomLogger] info: Server is running on port 8000
+2020-03-15T01:31:38.579Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-03-15T01:32:05.942Z [CustomLogger] info: Server is running on port 8000
+2020-03-15T01:32:07.158Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-03-15T01:32:31.016Z [CustomLogger] info: Server is running on port 8000
+2020-03-15T01:32:32.432Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-03-15T01:33:11.197Z [CustomLogger] info: Server is running on port 8000
+2020-03-15T01:33:13.554Z [CustomLogger] info: Server is running on port 8000
+2020-03-15T01:33:14.773Z [CustomLogger] info: Connected to Database mongodb+srv://jos50275266:akh5366@sublog-68lrc.mongodb.net/test?retryWrites=true&w=majority
+2020-03-15T01:39:44.122Z [CustomLogger] info: [0mGET /api/blog/photo/test-case-3 [36m304 [0m1579.500 ms - -[0m
+

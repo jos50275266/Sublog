@@ -10,7 +10,9 @@ const {
   photo,
   listRelated,
   listSearch,
-  listByUser
+  listByUser,
+  likeUpdate,
+  like
 } = require("../controllers/blog");
 const {
   requireSignin,
@@ -47,5 +49,7 @@ router.put(
   canUpdateDeleteBlog,
   update
 );
+router.put("/user/like/:slug", requireSignin, authMiddleware, likeUpdate);
+router.get("/user/like/:slug", like);
 
 module.exports = router;

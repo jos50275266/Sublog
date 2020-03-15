@@ -3,7 +3,6 @@ import Layout from "./../../components/Layout";
 import { singleTag } from "./../../actions/tag";
 import Card from "./../../components/blog/Card";
 import { API, DOMAIN, APP_NAME, FB_APP_ID } from "../../config";
-import "../../static/style.css";
 
 const Tag = ({ tag, blogs, query }) => {
   const head = () => (
@@ -54,14 +53,16 @@ const Tag = ({ tag, blogs, query }) => {
 };
 
 Tag.getInitialProps = ({ query }) => {
-  return singleTag(query.slug).then(data => {
-    if (data.error) {
-      console.log(data.error);
-    } else {
-      console.log(data.blogs);
-      return { tag: data.tag, blogs: data.blogs, query };
-    }
-  });
+  return singleTag(query.slug)
+    .then(data => {
+      if (data.error) {
+        console.log(data.error);
+      } else {
+        console.log(data.blogs);
+        return { tag: data.tag, blogs: data.blogs, query };
+      }
+    })
+    .catch(err => console.log(err));
 };
 
 export default Tag;

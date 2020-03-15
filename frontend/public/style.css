@@ -6,8 +6,66 @@ body {
   background: #ffffff;
 }
 
+ul.blog-post {
+  list-style: none;
+  font-size: 0px;
+}
+
+ul.blog-post li {
+  display: inline-block;
+  border-radius: 3px;
+  padding: 1.5em;
+  background: #fff;
+  border: 1px solid #eee;
+  font-size: 16px;
+  vertical-align: top;
+  box-shadow: 0 0 6px #eee;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+ul.blog-post li img {
+  width: 100%;
+  height: auto;
+}
+
+ul.blog-post li h3 {
+  text-align: left !important;
+  font-family: Source Sans Pro, sans-serif;
+  color: #333;
+  font-size: 1.1em;
+}
+
+ul.blog-post li p {
+  font-size: .9em;
+  line-height: 1.5em;
+  color: #8c8c8c;
+  text-align: left !important;
+  font-family: Open Sans, sans-serif;
+  font-weight: 300;
+}
+
+.button {
+  text-align: center;
+  width: 40%;
+  border: none;
+  background: #36B3A8;
+  font-family: Open Sans, sans-serif;
+  font-weight: 300;
+  font-size: 0.7em;
+  color: white;
+  border-radius: 5px;
+  padding: 8px 15px 8px 15px;
+}
+
+.button:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
 .container-fluid {
-  max-width: 1200px;
+  max-width: 1500px;
 }
 
 header h1 {
@@ -23,18 +81,5 @@ header h1 {
 }
 
 .card img {
-  width: 100%;
-}
-
-[class*="row"] {
-  margin-bottom: 1em;
-  justify-content: stretch;
-}
-
-[class*="col-"] {
-  background: #ffffff;
-  border: 1px solid #ddd;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
   width: 100%;
 }

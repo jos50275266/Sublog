@@ -1,5 +1,6 @@
 import fetch from "isomorphic-fetch";
 import { API } from "../config";
+import { handleResponse } from "./auth";
 
 export const userPublicProfile = username => {
   return fetch(`${API}/user/${username}`, {
@@ -36,6 +37,23 @@ export const update = (token, user) => {
       Authorization: `Bearer ${token}`
     },
     body: user
+  })
+    .then(res => {
+      if (res.status === 401) {
+        return handleResponse(res);
+      } else {
+        return res.json();
+      }
+    })
+    .catch(err => console.log(err));
+};
+
+export const writerData = username => {
+  return fetch(`${API}/user/writer/${username}`, {
+    method: "GET",
+    headers: {
+      Accept: "application/json"
+    }
   })
     .then(res => {
       return res.json();

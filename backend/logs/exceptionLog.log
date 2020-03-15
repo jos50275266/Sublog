@@ -164,3 +164,60 @@ TypeError: Cannot read property 'length' of undefined
     at WriteStream._final (internal/fs/streams.js:285:3)
     at callFinal (_stream_writable.js:651:10)
     at processTicksAndRejections (internal/process/task_queues.js:81:21)
+2020-03-14T08:57:13.388Z [CustomLogger] error: uncaughtException: multer is not defined
+ReferenceError: multer is not defined
+    at Object.<anonymous> (C:\Users\user\Desktop\Blog\backend\server.js:54:17)
+    at Module._compile (internal/modules/cjs/loader.js:955:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:991:10)
+    at Module.load (internal/modules/cjs/loader.js:811:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:723:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1043:10)
+    at internal/main/run_main_module.js:17:11
+2020-03-14T10:59:32.339Z [CustomLogger] error: uncaughtException: ex is not defined
+ReferenceError: ex is not defined
+    at Object.<anonymous> (C:\Users\user\Desktop\Blog\backend\server.js:41:9)
+    at Module._compile (internal/modules/cjs/loader.js:955:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:991:10)
+    at Module.load (internal/modules/cjs/loader.js:811:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:723:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1043:10)
+    at internal/main/run_main_module.js:17:11
+2020-03-14T10:59:37.103Z [CustomLogger] error: uncaughtException: Most middleware (like bodyParser) is no longer bundled with Express and must be installed separately. Please see https://github.com/senchalabs/connect#middleware.
+Error: Most middleware (like bodyParser) is no longer bundled with Express and must be installed separately. Please see https://github.com/senchalabs/connect#middleware.
+    at Function.get (C:\Users\user\Desktop\Blog\backend\node_modules\express\lib\express.js:112:13)
+    at Object.<anonymous> (C:\Users\user\Desktop\Blog\backend\server.js:41:17)
+    at Module._compile (internal/modules/cjs/loader.js:955:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:991:10)
+    at Module.load (internal/modules/cjs/loader.js:811:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:723:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1043:10)
+    at internal/main/run_main_module.js:17:11
+2020-03-14T10:59:39.366Z [CustomLogger] error: uncaughtException: Most middleware (like bodyParser) is no longer bundled with Express and must be installed separately. Please see https://github.com/senchalabs/connect#middleware.
+Error: Most middleware (like bodyParser) is no longer bundled with Express and must be installed separately. Please see https://github.com/senchalabs/connect#middleware.
+    at Function.get (C:\Users\user\Desktop\Blog\backend\node_modules\express\lib\express.js:112:13)
+    at Object.<anonymous> (C:\Users\user\Desktop\Blog\backend\server.js:41:17)
+    at Module._compile (internal/modules/cjs/loader.js:955:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:991:10)
+    at Module.load (internal/modules/cjs/loader.js:811:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:723:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1043:10)
+    at internal/main/run_main_module.js:17:11
+2020-03-14T10:59:42.372Z [CustomLogger] error: uncaughtException: ex is not defined
+ReferenceError: ex is not defined
+    at Object.<anonymous> (C:\Users\user\Desktop\Blog\backend\server.js:41:9)
+    at Module._compile (internal/modules/cjs/loader.js:955:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:991:10)
+    at Module.load (internal/modules/cjs/loader.js:811:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:723:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1043:10)
+    at internal/main/run_main_module.js:17:11
+2020-03-14T10:59:47.259Z [CustomLogger] error: uncaughtException: app.use() requires a middleware function
+TypeError: app.use() requires a middleware function
+    at Function.use (C:\Users\user\Desktop\Blog\backend\node_modules\express\lib\application.js:210:11)
+    at Object.<anonymous> (C:\Users\user\Desktop\Blog\backend\server.js:41:5)
+    at Module._compile (internal/modules/cjs/loader.js:955:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:991:10)
+    at Module.load (internal/modules/cjs/loader.js:811:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:723:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1043:10)
+    at internal/main/run_main_module.js:17:11

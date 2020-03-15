@@ -1,7 +1,7 @@
 import fetch from "isomorphic-fetch";
 import { API } from "../config";
 import queryString from "query-string";
-import { isAuth } from "./auth";
+import { isAuth, handleResponse } from "./auth";
 
 export const createBlog = (blog, token) => {
   let createBlogEndpoint;
@@ -21,7 +21,11 @@ export const createBlog = (blog, token) => {
     body: blog
   })
     .then(res => {
-      return res.json();
+      if (res.status === 401) {
+        return handleResponse(res);
+      } else {
+        return res.json();
+      }
     })
     .catch(err => console.log(err));
 };
@@ -100,7 +104,11 @@ export const removeBlog = (slug, token) => {
     }
   })
     .then(res => {
-      return res.json();
+      if (res.status === 401) {
+        return handleResponse(res);
+      } else {
+        return res.json();
+      }
     })
     .catch(err => console.log(err));
 };
@@ -123,7 +131,11 @@ export const updateBlog = (blog, token, slug) => {
     body: blog
   })
     .then(res => {
-      return res.json();
+      if (res.status === 401) {
+        return handleResponse(res);
+      } else {
+        return res.json();
+      }
     })
     .catch(err => console.log(err));
 };
@@ -134,6 +146,29 @@ export const listSearch = params => {
   console.log("query parans", query);
   return fetch(`${API}/blogs/search?${query}`, {
     method: "GET"
+  })
+    .then(res => {
+      return res.json();
+    })
+    .catch(err => console.log(err));
+};
+
+export const like = slug => {
+  return fetch(`${API}/user/like/${slug}`, {
+    method: "GET"
+  })
+    .then(res => res.json())
+    .catch(err => console.log(err));
+};
+
+export const likeUpdate = (slug, token) => {
+  return fetch(`${API}/user/like/${slug}`, {
+    method: "PUT",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`
+    }
   })
     .then(res => {
       return res.json();

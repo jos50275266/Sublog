@@ -1,30 +1,40 @@
+import fetch from "isomorphic-fetch";
 import Link from "next/link";
-import { useState, useEffect } from "react";
 import Router from "next/router";
+import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { withRouter } from "next/router";
+//
 import { isAuth } from "../../actions/auth";
 import { getCookie } from "../../actions/authHelpers";
 import { getCategories } from "../../actions/category";
 import { getTags } from "../../actions/tag";
 import { singleBlog, updateBlog } from "../../actions/blog";
-const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
-import "../../node_modules/react-quill/dist/quill.snow.css";
-import { QuillModules, QuillFormats } from "../../helpers/quill";
+
+// draft-js
+const Editor = dynamic(
+  () => import("react-draft-wysiwyg").then(mod => mod.Editor),
+  { ssr: false }
+);
+import { EditorState, convertFromRaw, convertToRaw } from "draft-js";
+import "../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import draftToHtml from "draftjs-to-html";
+
 import { API } from "./../../config";
 
 const BlogUpdate = ({ router }) => {
   const { slug } = router.query;
   const token = getCookie("token");
 
-  const [body, setBody] = useState("");
+  const [body, setBody] = useState(EditorState.createEmpty());
 
   const [values, setValues] = useState({
     title: "",
     error: "",
     success: "",
     formData: "",
-    body: ""
+    body: "",
+    excerpt: ""
   });
 
   const [categories, setCategories] = useState([]);
@@ -33,27 +43,87 @@ const BlogUpdate = ({ router }) => {
   const [checkedCategories, setCheckedCategories] = useState([]);
   const [checkedTags, setCheckedTags] = useState([]);
 
-  const { error, success, formData, title } = values;
+  const { error, success, formData, title, excerpt } = values;
 
   useEffect(() => {
+    blogFromLS();
     setValues({ ...values, formData: new FormData() });
     initBlog();
     initCategories();
     initTags();
   }, [router]);
 
+  const blogFromLS = () => {
+    if (typeof window === "undefined") {
+      return false;
+    }
+
+    if (localStorage.getItem("updatedDraftRaw")) {
+      const rawContentFromStore = convertFromRaw(
+        JSON.parse(localStorage.getItem("updatedDraftRaw"))
+      );
+      setBody(EditorState.createWithContent(rawContentFromStore));
+    } else {
+      setBody(EditorState.createEmpty());
+    }
+  };
+
+  const uploadImageCallBack = file => {
+    const formData = new FormData();
+    formData.append("file", file);
+
+    return new Promise((resolve, reject) => {
+      fetch("http://localhost:8000/uploadImage", {
+        method: "POST",
+        body: formData
+      })
+        .then(res => res.json())
+        .then(resData => {
+          console.log("Hello", resData);
+          resolve({ data: { link: resData } });
+        })
+        .catch(error => {
+          console.log(error);
+          reject(error.toString());
+        });
+    });
+  };
+
   const initBlog = () => {
     if (slug) {
-      singleBlog(slug).then(data => {
-        if (data.error) {
-          console.log(data.error);
-        } else {
-          setValues({ ...values, title: data.title, formData: new FormData() });
-          setBody(data.body);
-          setCategoriesArray(data.categories);
-          setTagsArray(data.tags);
-        }
-      });
+      singleBlog(slug)
+        .then(data => {
+          console.log("data", data);
+          if (data.error) {
+            console.log(data.error);
+          } else {
+            setValues({
+              ...values,
+              title: data.title,
+              excerpt: data.excerpt,
+              formData: new FormData()
+            });
+            setBody(
+              EditorState.createWithContent(
+                convertFromRaw(JSON.parse(data.body))
+              )
+            ); // 요기
+            setCategoriesArray(data.categories);
+            setTagsArray(data.tags);
+          }
+        })
+        .catch(err => console.log(err));
+    }
+  };
+
+  const saveRawContentToLocalStorage = e => {
+    if (typeof window !== "undefined") {
+      const contentState = body.getCurrentContent();
+      const rawContent = convertToRaw(contentState);
+      window.localStorage.setItem(
+        "updatedDraftRaw",
+        JSON.stringify(rawContent)
+      );
     }
   };
 
@@ -74,23 +144,27 @@ const BlogUpdate = ({ router }) => {
   };
 
   const initCategories = () => {
-    getCategories().then(data => {
-      if (data.error) {
-        setValues({ ...values, error: data.error });
-      } else {
-        setCategories(data);
-      }
-    });
+    getCategories()
+      .then(data => {
+        if (data.error) {
+          setValues({ ...values, error: data.error });
+        } else {
+          setCategories(data);
+        }
+      })
+      .catch(err => console.log(err));
   };
 
   const initTags = () => {
-    getTags().then(data => {
-      if (data.error) {
-        setValues({ ...values, error: data.error });
-      } else {
-        setTags(data);
-      }
-    });
+    getTags()
+      .then(data => {
+        if (data.error) {
+          setValues({ ...values, error: data.error });
+        } else {
+          setTags(data);
+        }
+      })
+      .catch(err => console.log(err));
   };
 
   const handleCategoriesToggle = category => () => {
@@ -131,11 +205,6 @@ const BlogUpdate = ({ router }) => {
     const result = checkedTags.indexOf(tag);
     if (result !== -1) return true;
     else return false;
-  };
-
-  const handleBody = e => {
-    setBody(e);
-    formData.set("body", e);
   };
 
   const handleChange = name => e => {
@@ -181,22 +250,37 @@ const BlogUpdate = ({ router }) => {
   // Blog가 update 되어도 url은 처음 만든 것으로 유지.
   const editBlog = e => {
     e.preventDefault();
-    updateBlog(formData, token, slug).then(data => {
-      if (data.error) setValues({ ...values, error: data.error });
-      else {
-        setValues({
-          ...values,
-          title: "",
-          success: `${data.title}이 성공적으로 업데이트 되었습니다!`
-        });
-        alert("업데이트 성공");
-        if (isAuth() && isAuth().role === 1) {
-          router.replace(`/admin`);
-        } else if (isAuth() && isAuth().role === 0) {
-          router.replace(`/user`);
+
+    formData.set(
+      "body",
+      JSON.stringify(convertToRaw(body.getCurrentContent()))
+    );
+
+    //    console.log("formData", formData);
+
+    updateBlog(formData, token, slug)
+      .then(data => {
+        if (data === undefined) return false;
+        else if (data.error) setValues({ ...values, error: data.error });
+        else {
+          setValues({
+            ...values,
+            title: "",
+            error: "",
+            success: `${data.title}이 성공적으로 업데이트 되었습니다!`,
+            excerpt: ""
+          });
+          alert("업데이트 성공");
+          window.localStorage.removeItem("updatedDraftRaw");
+
+          if (isAuth() && isAuth().role === 1) {
+            router.replace(`/admin`);
+          } else if (isAuth() && isAuth().role === 0) {
+            router.replace(`/user`);
+          }
         }
-      }
-    });
+      })
+      .catch(err => console.log(err));
   };
 
   const showError = () => {
@@ -227,16 +311,42 @@ const BlogUpdate = ({ router }) => {
             className="form-control"
             value={title}
             onChange={handleChange("title")}
+            placeholder="제목을 입력해주세요..."
+          />
+        </div>
+        <div className="form-group">
+          <label className="text-muted">소개</label>
+          <input
+            type="text"
+            className="form-control"
+            value={excerpt}
+            onChange={handleChange("excerpt")}
+            placeholder="소개글을 입력해주세요..."
           />
         </div>
 
         <div className="form-group">
-          <ReactQuill
-            modules={QuillModules}
-            formats={QuillFormats}
-            value={body}
-            placeholder="놀라운 이야기를 공유해주세요!..."
-            onChange={handleBody}
+          <Editor
+            onChange={saveRawContentToLocalStorage}
+            editorState={body}
+            wrapperClassName="wrapper-class"
+            editorClassName="editor-class"
+            toolbarClassName="toolbar-class"
+            wrapperStyle={{ border: "2px solid green", marginBottom: "20px" }}
+            editorStyle={{ height: "300px", padding: "10px" }}
+            onEditorStateChange={editorState => setBody(editorState)}
+            toolbar={{
+              image: {
+                previewImage: true,
+                uploadCallback: uploadImageCallBack,
+                alt: { present: true, mandatory: false }
+              }
+            }}
+          />
+          <textarea
+            disabled
+            style={{ width: "100%" }}
+            value={draftToHtml(convertToRaw(body.getCurrentContent()))}
           />
         </div>
 
@@ -244,6 +354,15 @@ const BlogUpdate = ({ router }) => {
           <button type="submit" className="btn btn-primary">
             업데이트
           </button>
+          <div>
+            {body && (
+              <img
+                src={`${API}/blog/photo/${slug}`}
+                alt={title}
+                style={{ width: "200px", height: "200px" }}
+              />
+            )}
+          </div>
         </div>
       </form>
     );
@@ -258,13 +377,6 @@ const BlogUpdate = ({ router }) => {
             {showError()}
             {showSuccess()}
           </div>
-          {body && (
-            <img
-              src={`${API}/blog/photo/${slug}`}
-              alt={title}
-              style={{ width: "100%" }}
-            />
-          )}
         </div>
 
         <div className="col-md-4">

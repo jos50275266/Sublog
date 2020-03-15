@@ -67,27 +67,21 @@ const Blogs = ({ blogs, categories, tags, size, router }) => {
     <React.Fragment>
       {head()}
       <Layout className="bg-white">
-        <main>
-          <div className="container-fluid">
-            <header>
-              <div className="col-md-12 pt-3">
-                <h1 className="display-4 font-weight-bold text-center">
-                  Sulog
-                </h1>
-              </div>
-              <section>
-                <div className="pb-5 text-center">
-                  {showAllCategories()}
-                  <br />
-                  {showAllTags()}
-                </div>
-              </section>
-            </header>
-          </div>
-        </main>
-        <article className="container-fluid">
-          <div className="row">{showAllBlogs()}</div>
-        </article>
+        <section className="container-fluid">
+          <header>
+            <article className="col-md-12 pt-3">
+              <h1 className="display-4 font-weight-bold text-center">Sulog</h1>
+            </article>
+            <article className="pb-5 text-center">
+              {showAllCategories()}
+              <br />
+              {showAllTags()}
+            </article>
+          </header>
+        </section>
+        <section className="container-fluid">
+          <main className="row">{showAllBlogs()}</main>
+        </section>
       </Layout>
     </React.Fragment>
   );
@@ -96,19 +90,21 @@ const Blogs = ({ blogs, categories, tags, size, router }) => {
 // Lifecycle method, getInitialProps can be used only on pages not in components
 // getInitialProps를 사용하면 pre-rendered page가 사라짐
 Blogs.getInitialProps = () => {
-  return listBlogsWithCategoriesAndTags().then(data => {
-    if (data.error) {
-      console.log(data.error);
-    } else {
-      // return 값을 props 값으로 사용할 수 있다.
-      return {
-        blogs: data.blogs,
-        categories: data.categories,
-        tags: data.tags,
-        size: data.size
-      };
-    }
-  });
+  return listBlogsWithCategoriesAndTags()
+    .then(data => {
+      if (data.error) {
+        console.log(data.error);
+      } else {
+        // return 값을 props 값으로 사용할 수 있다.
+        return {
+          blogs: data.blogs,
+          categories: data.categories,
+          tags: data.tags,
+          size: data.size
+        };
+      }
+    })
+    .catch(err => console.log(err));
 };
 
 export default withRouter(Blogs); //getInitialProps

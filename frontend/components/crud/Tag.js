@@ -16,14 +16,18 @@ const Tag = () => {
 
   const clickSubmit = e => {
     e.preventDefault();
-    create({ name }, token).then(data => {
-      if (data.error) {
-        console.log("data", data);
-        setValues({ ...values, error: data.error, success: false });
-      } else {
-        setValues({ error: false, success: true, name: "" });
-      }
-    });
+    create({ name }, token)
+      .then(data => {
+        if (data === undefined) {
+          return false;
+        } else if (data.error) {
+          console.log("data", data);
+          setValues({ ...values, error: data.error, success: false });
+        } else {
+          setValues({ error: false, success: true, name: "" });
+        }
+      })
+      .catch(err => console.log(err));
   };
 
   const handleChange = e => {
